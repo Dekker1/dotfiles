@@ -14,5 +14,17 @@ homesick exec dotfiles ./gitsetup
 homesick link dotfiles
 ```
 
+### Sublime Text 3
+
+To setup the sublime text 3 settings from the repository:
+```bash
+homesick exec dotfiles ./subl_setup
+```
+
+To backup your settings into the repository:
+```bash
+homesick exec dotfiles ./subl_copy
+```
+
 ### Other documentation
 If I would ever be in the mood to document things.
