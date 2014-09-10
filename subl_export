@@ -1,0 +1,9 @@
+#!/bin/sh
+# Just copy the Sublime settings into our repository
+set -x
+
+sublime_dir=~/.config/sublime-text-3
+
+rm -rf $DOTFILES/sublime/*
+cp -R $sublime_dir/Packages $sublime_dir/Installed\ Packages $DOTFILES/sublime
+
