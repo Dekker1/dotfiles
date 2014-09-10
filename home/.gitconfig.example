@@ -1,0 +1,27 @@
+# Sample gitconfig
+#
+
+[user]
+        name = AUTHORNAME
+        email = AUTHOREMAIL
+[credential]
+        helper = GIT_CREDENTIAL_HELPER
+[alias]
+        co = checkout
+        logpretty = log --graph --decorate --pretty=oneline --abbrev-commit
+        s = status
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+        interactive = auto
+[core]
+        excludesfile = ~/.gitignore
+        editor = vim
+[help]
+        autocorrect = 1
+[push]
+        default = current
+[merge]
+        tool = vimdiff
