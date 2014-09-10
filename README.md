@@ -7,10 +7,11 @@ Let's have some dotfiles!
 This repository is designed to be used as a Homesick CASTLE. The following commands should be used to symlink all dotfiles, install oh-my-zsh and run all other install scripts.
 
 ```bash
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 gem install homesick
-homesick jjdeker/dotfiles
-symlink dotfiles
-homesick exec dotfiles ./install
+homesick clone jjdeker/dotfiles
+homesick exec dotfiles ./gitsetup
+homesick link dotfiles
 ```
 
 ### Other documentation
