@@ -4,6 +4,5 @@ set -x
 
 sublime_dir=~/.config/sublime-text-3
 
-mv "$sublime_dir/Packages" "$sublime_dir/Packages.backup"
-mv "$sublime_dir/Installed Packages" "$sublime_dir/Installed Packages.backup"
-cp -R "$DOTFILES/sublime/Packages" "$DOTFILES/sublime/Installed Packages" "$sublime_dir"
+mv "$sublime_dir/Packages/User" "$sublime_dir/User.backup"
+cp -R "$DOTFILES/sublime/User" "$sublime_dir/Packages"

@@ -5,5 +5,5 @@ set -x
 sublime_dir=~/.config/sublime-text-3
 
 rm -rf $DOTFILES/sublime/*
-cp -R $sublime_dir/Packages $sublime_dir/Installed\ Packages $DOTFILES/sublime
+cp -R $sublime_dir/Packages/User $DOTFILES/sublime
 
