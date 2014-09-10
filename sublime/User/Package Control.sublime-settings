@@ -1,7 +1,12 @@
 {
 	"installed_packages":
 	[
+		"Emmet",
+		"GitGutter",
 		"GoSublime",
-		"Solarized Color Scheme"
+		"LaTeXTools",
+		"Markdown Preview",
+		"Solarized Color Scheme",
+		"Theme - Orchis"
 	]
 }

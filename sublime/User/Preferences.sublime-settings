@@ -1,7 +1,16 @@
 {
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
+	"font_face": "Hasklig",
+	"font_size": 10,
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+	"rulers":
+	[
+		80
+	],
+	"soda_classic_tabs": true,
+	"spell_check": true,
+	"theme": "Soda Adwaita.sublime-theme"
 }
