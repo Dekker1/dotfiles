@@ -1,5 +1,5 @@
 home/.gitconfig
-sublime/Packages/User/Package Control.cache
+sublime/User/Package Control.cache
 *.last-run
 sublime/**/bin
 **/log.txt
