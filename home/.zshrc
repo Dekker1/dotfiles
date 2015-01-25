@@ -56,7 +56,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow ruby history-substring-search autojump golang)
+plugins=(git git-flow history-substring-search autojump golang)
 
 source $ZSH/oh-my-zsh.sh
 
