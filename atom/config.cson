@@ -1,0 +1,25 @@
+"*":
+  "exception-reporting":
+    userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    invisibles:
+      {}
+    showInvisibles: true
+    softTabs: false
+    softWrap: true
+  linter:
+    subtleLinterErrors: [
+      "rust"
+    ]
+  "linter-rust":
+    executablePath: "/usr/local/bin/rustc"
+    cargoExecutablePath: "/usr/local/bin/cargo"
+  "linter-erlc":
+    erlcExecutablePath: "/usr/local/bin/erlc"

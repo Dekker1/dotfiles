@@ -1,0 +1,4 @@
+language-erlang
+language-rust
+linter
+linter-rust
