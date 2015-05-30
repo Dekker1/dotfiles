@@ -1,8 +1,0 @@
-#!/bin/sh
-# Import sublime settings from our repository into the sublime settings folder
-set -x
-
-sublime_dir=~/.config/sublime-text-3
-
-mv "$sublime_dir/Packages/User" "$sublime_dir/User.backup"
-cp -R "$DOTFILES/sublime/User" "$sublime_dir/Packages"
