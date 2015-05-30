@@ -14,16 +14,17 @@ homesick exec dotfiles ./gitsetup
 homesick link dotfiles
 ```
 
-### Sublime Text 3
+### Atom
 
-To setup the sublime text 3 settings from the repository:
+To setup the Atom settings from the repository:
 ```bash
-homesick exec dotfiles ./subl_setup
+homesick exec dotfiles ./atom_setup
 ```
+This will backup your current atom setup to `atom/backup` and will install the configuration and packages as included in the repository.
 
 To backup your settings into the repository:
 ```bash
-homesick exec dotfiles ./subl_copy
+homesick exec dotfiles ./atom_copy
 ```
 
 ### Other documentation

@@ -5,6 +5,6 @@ set -x
 
 atom_dir=~/.atom
 
-mv "$atom_dir" "$sublime_dir/.backup"
+mv "$atom_dir" "$DOTFILES/atom/backup"
 cp -R "$DOTFILES/atom" "$atom_dir"
 cat $DOTFILES/atom/package_list.txt | while read p; do apm install $p; done

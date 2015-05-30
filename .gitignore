@@ -1,5 +1,3 @@
 home/.gitconfig
-sublime/User/Package Control.cache
-*.last-run
-sublime/**/bin
+atom/backup/*
 **/log.txt
