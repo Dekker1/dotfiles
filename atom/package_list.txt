@@ -1,4 +1,6 @@
+file-icons
 language-erlang
 language-rust
 linter
 linter-rust
+merge-conflicts

@@ -23,3 +23,5 @@
     cargoExecutablePath: "/usr/local/bin/cargo"
   "linter-erlc":
     erlcExecutablePath: "/usr/local/bin/erlc"
+  "file-icons":
+    {}
