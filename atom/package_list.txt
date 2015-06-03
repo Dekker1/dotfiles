@@ -2,5 +2,6 @@ file-icons
 language-erlang
 language-rust
 linter
+linter-ruby
 linter-rust
 merge-conflicts

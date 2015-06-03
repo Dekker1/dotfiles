@@ -25,3 +25,5 @@
     erlcExecutablePath: "/usr/local/bin/erlc"
   "file-icons":
     {}
+  "linter-ruby":
+    rubyExecutablePath: "/usr/local/opt/rbenv/shims/ruby"
