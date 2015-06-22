@@ -11,7 +11,6 @@
   editor:
     invisibles: {}
     showInvisibles: true
-    softTabs: false
     softWrap: true
   linter:
     subtleLinterErrors: [
@@ -27,3 +26,5 @@
     rubyExecutablePath: "/usr/local/opt/rbenv/shims/ruby"
   "one-dark-ui": {}
   "merge-conflicts": {}
+  tabs:
+    usePreviewTabs: true
