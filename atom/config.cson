@@ -1,30 +1,54 @@
 "*":
-  "exception-reporting":
-    userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
-  welcome:
-    showOnStartup: false
   core:
+    projectHome: "~/Repositories/"
     themes: [
       "one-dark-ui"
       "chester-atom-syntax"
     ]
   editor:
+    fontFamily: "Fira Code"
+    fontSize: 16
     invisibles: {}
     showInvisibles: true
     softWrap: true
+  "exception-reporting":
+    userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
+  "file-icons": {}
+  "go-plus":
+    goPath: "~/Documents/Go"
+  "language-mzn": {}
   linter:
+    errorPanelHeight: 106
     subtleLinterErrors: [
       "rust"
     ]
-  "linter-rust":
-    executablePath: "/usr/local/bin/rustc"
-    cargoExecutablePath: "/usr/local/bin/cargo"
+  "linter-encore": {}
   "linter-erlc":
     erlcExecutablePath: "/usr/local/bin/erlc"
-  "file-icons": {}
+  "linter-mzn": {}
   "linter-ruby":
     rubyExecutablePath: "/usr/local/opt/rbenv/shims/ruby"
-  "one-dark-ui": {}
+  "linter-rust":
+    cargoExecutablePath: "/usr/local/bin/cargo"
+    executablePath: "/usr/local/bin/rustc"
   "merge-conflicts": {}
+  minimap:
+    plugins:
+      "git-diff": true
+  "one-dark-ui": {}
   tabs:
     usePreviewTabs: true
+  welcome:
+    showOnStartup: false
+".basic.html.text":
+  editor:
+    softWrap: true
+".coffee.source":
+  editor:
+    tabLength: 2
+".enc.source":
+  editor:
+    tabLength: 2
+".source.toml":
+  editor:
+    tabLength: 2
