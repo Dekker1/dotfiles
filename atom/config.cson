@@ -2,23 +2,23 @@
   core:
     projectHome: "~/Repositories/"
     themes: [
-      "one-dark-ui"
-      "chester-atom-syntax"
+      "one-light-ui"
+      "acme-syntax"
     ]
   editor:
     fontFamily: "Fira Code"
     fontSize: 16
     invisibles: {}
-    showInvisibles: true
+    showLineNumbers: false
     softWrap: true
   "exception-reporting":
     userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
   "file-icons": {}
   "go-plus":
-    goPath: "~/Documents/Go"
+    goPath: "~/.go"
   "language-mzn": {}
   linter:
-    errorPanelHeight: 106
+    errorPanelHeight: 102
     subtleLinterErrors: [
       "rust"
     ]

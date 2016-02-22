@@ -1,3 +1,4 @@
+acme-syntax
 chester-atom-syntax
 go-plus
 language-encore
