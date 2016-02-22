@@ -4,5 +4,4 @@ set -x
 
 omz_dir=~/.oh-my-zsh
 
-cp -R "$DOTFILES/oh-my-zsh" "$omz_dir"
-./atom_setup
+cp -R $DOTFILES/oh-my-zsh/* $omz_dir
