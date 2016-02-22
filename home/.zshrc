@@ -56,7 +56,7 @@ ZSH_THEME="odin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history-substring-search autojump virtualenv virtualenvwrapper autoenv golang)
+plugins=(git history-substring-search autojump golang)
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
