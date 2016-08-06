@@ -2,12 +2,11 @@
   core:
     projectHome: "~/Repositories/"
     themes: [
-      "one-light-ui"
-      "acme-syntax"
+      "one-dark-ui"
+      "chester-atom-syntax"
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 16
     invisibles: {}
     showLineNumbers: false
     softWrap: true
@@ -35,6 +34,7 @@
   minimap:
     plugins:
       "git-diff": true
+      "git-diffDecorationsZIndex": 0
   "one-dark-ui": {}
   tabs:
     usePreviewTabs: true
