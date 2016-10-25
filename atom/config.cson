@@ -1,20 +1,26 @@
 "*":
   core:
     projectHome: "~/Repositories/"
+    telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
-      "chester-atom-syntax"
+      "one-light-ui"
+      "flatwhite-syntax"
     ]
   editor:
-    fontFamily: "Fira Code"
+    fontFamily: "Iosevka"
     invisibles: {}
-    showLineNumbers: false
+    showInvisibles: true
     softWrap: true
   "exception-reporting":
     userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
   "file-icons": {}
+  "flatwhite-syntax":
+    ebmedded: "Full"
   "go-plus":
     goPath: "~/.go"
+    panelDisplayMode: "closed"
+  "gruvbox-plus-syntax":
+    brightness: "Light"
   "language-mzn": {}
   linter:
     errorPanelHeight: 102
@@ -36,8 +42,19 @@
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "one-dark-ui": {}
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.tex.latex"
+    ]
   tabs:
     usePreviewTabs: true
+  "tree-view":
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false
 ".basic.html.text":
