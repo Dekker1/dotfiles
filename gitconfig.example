@@ -21,6 +21,6 @@
 [push]
 	default = current
 [pull]
-	rebase = true
+	ff = only
 [merge]
-	tool = vimdiff
+	ff = only
