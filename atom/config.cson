@@ -3,13 +3,15 @@
     projectHome: "~/Repositories/"
     telemetryConsent: "no"
     themes: [
-      "one-light-ui"
-      "flatwhite-syntax"
+      "one-dark-ui"
+      "ariake-dark-syntax"
     ]
+    titleBar: "custom"
   editor:
-    fontFamily: "Iosevka"
+    fontFamily: "hack"
     invisibles: {}
     showInvisibles: true
+    softTabs: false
     softWrap: true
   "exception-reporting":
     userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
@@ -22,8 +24,8 @@
   "gruvbox-plus-syntax":
     brightness: "Light"
   "language-mzn": {}
+  latextools: {}
   linter:
-    errorPanelHeight: 102
     subtleLinterErrors: [
       "rust"
     ]
@@ -36,6 +38,9 @@
   "linter-rust":
     cargoExecutablePath: "/usr/local/bin/cargo"
     executablePath: "/usr/local/bin/rustc"
+  "linter-ui-default": {}
+  "linter-write-good":
+    severityLevel: "Warning"
   "merge-conflicts": {}
   minimap:
     plugins:
@@ -50,6 +55,7 @@
       "text.plain"
       "text.plain.null-grammar"
       "text.tex.latex"
+      "text.html.basic"
     ]
   tabs:
     usePreviewTabs: true
