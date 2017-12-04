@@ -4,14 +4,17 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "ariake-dark-syntax"
+      "oceanic-next"
     ]
     titleBar: "custom"
+  "duotone-dark-syntax":
+    color:
+      duo: "#fec38f"
+      uno: "#ae91e8"
   editor:
     fontFamily: "hack"
     invisibles: {}
     showInvisibles: true
-    softTabs: false
     softWrap: true
   "exception-reporting":
     userId: "661f7a95-861e-f69d-0a5b-98f32d43eede"
@@ -19,11 +22,20 @@
   "flatwhite-syntax":
     ebmedded: "Full"
   "go-plus":
+    disabledBundledPackages: [
+      "go-debug"
+    ]
     goPath: "~/.go"
+    panel:
+      currentWidth: "26.127946127946128vw"
+      displayMode: "closed"
     panelDisplayMode: "closed"
+    test:
+      coverageDisplayMode: "gutter"
   "gruvbox-plus-syntax":
     brightness: "Light"
-  "language-mzn": {}
+  "language-mzn":
+    enableLinter: false
   latextools: {}
   linter:
     subtleLinterErrors: [
