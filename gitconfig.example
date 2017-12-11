@@ -22,5 +22,3 @@
 	default = current
 [pull]
 	ff = only
-[merge]
-	ff = only
