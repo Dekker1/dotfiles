@@ -1,10 +1,13 @@
 "*":
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
   core:
     projectHome: "~/Repositories/"
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "oceanic-next"
+      "styri-syntax"
     ]
     titleBar: "custom"
   "duotone-dark-syntax":
