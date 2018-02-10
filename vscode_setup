@@ -1,0 +1,21 @@
+#!/bin/sh
+# Import Visual Studio Code settings from our repository into the
+# Visual Studio Code settings folder and install the packages
+# from the package list
+set -x
+
+if [ "$(uname -s)" == "Darwin" ]
+then
+    config=$HOME/Library/Application\ Support/Code/User/settings.json
+else
+    config=$HOME/.config/Code/User/settings.json
+fi
+
+# backup
+mkdir -p $DOTFILES/vscode/backup
+mv "$config" $DOTFILES/vscode/backup
+code code --list-extensions > $DOTFILES/vscode/backup/package_list.txt
+
+# setup
+cp $DOTFILES/vscode/settings.json "$config"
+cat $DOTFILES/vscode/package_list.txt | while read p; do code --install-extension $p; done

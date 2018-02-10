@@ -1,0 +1,15 @@
+#!/bin/sh
+# Just copy the Visual Studio Code settings and a package list into our repository
+set -x
+
+if [ "$(uname -s)" == "Darwin" ]
+then
+    config=$HOME/Library/Application\ Support/Code/User/settings.json
+else
+    config=$HOME/.config/Code/User/settings.json
+fi
+
+mkdir -p $DOTFILES/vscode
+rm -f $DOTFILES/vscode/{settings.json,package_list.txt}
+cp "$config" $DOTFILES/vscode
+code code --list-extensions > $DOTFILES/vscode/package_list.txt

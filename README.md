@@ -14,17 +14,17 @@ homesick exec dotfiles ./gitsetup
 homesick link dotfiles
 ```
 
-### Atom
+### Visual Studio Code
 
-To setup the Atom settings from the repository:
+To setup the Visual Studio Code settings from the repository:
 ```bash
-homesick exec dotfiles ./atom_setup
+homesick exec dotfiles ./vscode_setup
 ```
-This will backup your current atom setup to `atom/backup` and will install the configuration and packages as included in the repository.
+This will backup your current Visual Studio Code setup to `vscode/backup` and will install the configuration and packages as included in the repository.
 
 To backup your settings into the repository:
 ```bash
-homesick exec dotfiles ./atom_copy
+homesick exec dotfiles ./vscode_copy
 ```
 
 ### Other documentation
