@@ -1,0 +1,8 @@
+James-Yu.latex-workshop
+codezombiech.gitignore
+dt.wrap
+lukehoban.Go
+dekkerone.minizinc
+ms-vscode.cpptools
+streetsidesoftware.code-spell-checker
+teabyii.ayu

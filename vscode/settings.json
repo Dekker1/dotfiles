@@ -1,0 +1,18 @@
+{
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 13,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "on",
+    "editor.rulers": [80],
+    "cSpell.ignoreRegExpList": [
+        "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
+        "\\$.+?\\$"
+    ],
+    "cSpell.language": "en,en-GB",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Ayu Mirage",
+    "cSpell.userWords": [
+        "reification",
+        "reifications"
+    ],
+}
