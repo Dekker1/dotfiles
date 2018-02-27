@@ -8,11 +8,14 @@
         "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
         "\\$.+?\\$"
     ],
-    "cSpell.language": "en,en-GB",
+    "cSpell.language": "en-GB",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Ayu Mirage",
     "cSpell.userWords": [
+        "Dekker",
         "reification",
         "reifications"
     ],
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
 }

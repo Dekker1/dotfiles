@@ -1,8 +1,10 @@
 James-Yu.latex-workshop
 codezombiech.gitignore
 dt.wrap
+faustinoaq.lex-flex-yacc-bison
 lukehoban.Go
 dekkerone.minizinc
+ms-python.python
 ms-vscode.cpptools
 streetsidesoftware.code-spell-checker
 teabyii.ayu
