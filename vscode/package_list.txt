@@ -1,10 +1,12 @@
+DekkerOne.minizinc
 James-Yu.latex-workshop
+PKief.material-icon-theme
+bungcip.better-toml
 codezombiech.gitignore
-dt.wrap
 faustinoaq.lex-flex-yacc-bison
 lukehoban.Go
-dekkerone.minizinc
 ms-python.python
 ms-vscode.cpptools
+stkb.rewrap
 streetsidesoftware.code-spell-checker
 teabyii.ayu

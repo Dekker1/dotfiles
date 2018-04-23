@@ -1,21 +1,22 @@
 {
-    "editor.fontFamily": "Hack",
-    "editor.fontSize": 13,
-    "editor.renderWhitespace": "boundary",
-    "editor.wordWrap": "on",
-    "editor.rulers": [80],
-    "cSpell.ignoreRegExpList": [
-        "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
-        "\\$.+?\\$"
-    ],
+    "cSpell.ignoreRegExpList": [ "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?", "\\$.+?\\$"],
     "cSpell.language": "en-GB",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Ayu Mirage",
-    "cSpell.userWords": [
-        "Dekker",
-        "reification",
-        "reifications"
-    ],
+    "cSpell.userWords": ["Dekker" ,"reification","reifications"],
+    "editor.fontFamily": "IBM Plex Mono",
+    "editor.fontSize": 15,
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [80],
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "python.linting.pylintEnabled": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "search.location": "panel",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
 }
