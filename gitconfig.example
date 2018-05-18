@@ -1,12 +1,10 @@
-[user]
-	name = AUTHORNAME
-	email = AUTHOREMAIL
-[credential]
-	helper = GIT_CREDENTIAL_HELPER
 [alias]
 	co = checkout
 	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	prune = fetch --prune
+	stash-all = stash save --include-untracked
 	s = status
+	undo = reset --soft HEAD^
 [color]
 	diff = auto
 	status = auto
@@ -16,9 +14,22 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
+[commit]
+	gpgSign = true
+[credential]
+	helper = GIT_CREDENTIAL_HELPER
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [help]
 	autocorrect = 1
 [push]
-	default = current
-[pull]
-	ff = only
+	default = simple
+	followTags = true
+[user]
+	name = AUTHORNAME
+	email = AUTHOREMAIL
+	signingkey = AUTHORKEY
