@@ -1,0 +1,9 @@
+#!/bin/sh
+# Just copy the Atom settings and a package list into our repository
+set -x
+
+atom_dir=~/.atom
+
+rm -rf $DOTFILES/atom/*
+cp $atom_dir/config.cson $atom_dir/styles.less $DOTFILES/atom
+ls $atom_dir/packages > $DOTFILES/atom/package_list.txt

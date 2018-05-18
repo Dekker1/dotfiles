@@ -1,0 +1,10 @@
+#!/bin/sh
+# Import atom settings from our repository into the atom settings folder
+# and install the packages from the package list
+set -x
+
+atom_dir=~/.atom
+
+mv "$atom_dir" "$DOTFILES/atom/backup"
+cp -R "$DOTFILES/atom" "$atom_dir"
+cat $DOTFILES/atom/package_list.txt | while read p; do apm install $p; done

@@ -1,0 +1,17 @@
+"*":
+  core: {}
+  editor: {}
+  "exception-reporting":
+    userId: "e1b5760e-3b46-40f7-9441-f7a9bd9b887b"
+".basic.html.text":
+  editor:
+    softWrap: true
+".coffee.source":
+  editor:
+    tabLength: 2
+".enc.source":
+  editor:
+    tabLength: 2
+".source.toml":
+  editor:
+    tabLength: 2
