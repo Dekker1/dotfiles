@@ -1,8 +1,14 @@
 "*":
-  core: {}
-  editor: {}
+  core:
+    telemetryConsent: "no"
+    titleBar: "custom"
+  editor:
+    fontFamily: "IBM Plex Mono"
+    softWrap: true
   "exception-reporting":
     userId: "e1b5760e-3b46-40f7-9441-f7a9bd9b887b"
+  welcome:
+    showOnStartup: false
 ".basic.html.text":
   editor:
     softWrap: true

@@ -1,0 +1,3 @@
+language-latex
+language-mzn
+latex
