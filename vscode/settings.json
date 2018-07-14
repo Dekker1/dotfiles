@@ -16,7 +16,7 @@
     "search.location": "panel",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.colorTheme": "Ayu Light",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
 }
