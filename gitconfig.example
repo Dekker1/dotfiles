@@ -28,7 +28,6 @@
 	autocorrect = 1
 [push]
 	default = simple
-	followTags = true
 [user]
 	name = AUTHORNAME
 	email = AUTHOREMAIL
