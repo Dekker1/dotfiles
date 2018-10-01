@@ -6,7 +6,7 @@ zplug "plugins/history-substring-search", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "geometry-zsh/geometry"
 
-zplug "~/.dotfiles/autorun/*.zsh", from:local
+zplug "~/.dotfiles/zsh/autorun/*.zsh", from:local
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
