@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore
+    ~/.tmux.conf: tools/.tmux.conf
+    ~/.zshenv: zsh/.zshenv
+    ~/.zshrc: zsh/.zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["[ -d \"$HOME/.zplug\" ] || curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh", Install ZPlug]

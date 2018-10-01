@@ -1,7 +1,15 @@
-#!/bin/sh
-# Copies various files into the right folders
-set -x
+#!/usr/bin/env bash
 
-omz_dir=~/.oh-my-zsh
+set -e
 
-cp -R $DOTFILES/oh-my-zsh/* $omz_dir
+CONFIG="install.conf.yaml"
+DOTBOT_DIR="dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"

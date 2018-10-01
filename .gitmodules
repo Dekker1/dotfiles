@@ -1,3 +1,3 @@
-[submodule "home/.oh-my-zsh/themes/geometry"]
-	path = home/.oh-my-zsh/themes/geometry
-	url = git@github.com:geometry-zsh/geometry.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
