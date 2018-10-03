@@ -8,6 +8,14 @@
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
     ~/.tmux.conf: tools/.tmux.conf
+    ~/Library/Application Support/Sublime Text 3/Packages/User: 
+      path: subl
+      # if: '[[ "$(uname)" == "Darwin" ]]'
+      force: true
+    ~/.config/sublime-text-3/Packages/User: 
+      path: subl
+      # if: '[[ "$(uname)" == "Linux" ]]'
+      force: true
     ~/.zshenv: zsh/.zshenv
     ~/.zshrc: zsh/.zshrc
 
