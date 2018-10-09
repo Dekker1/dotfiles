@@ -1,10 +1,17 @@
 {
+	"added_words":
+	[
+		"Dekker",
+		"Jip"
+	],
 	"color_scheme": "Packages/ayu/ayu-light.tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
 	"font_face": "IBM Plex Mono",
 	"font_size": 15,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"spell_check": true,
 	"theme": "ayu-light.sublime-theme"
 }
