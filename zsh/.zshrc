@@ -1,6 +1,7 @@
 source ~/.zplug/init.zsh
 
 zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "plugins/history-substring-search", from:oh-my-zsh
