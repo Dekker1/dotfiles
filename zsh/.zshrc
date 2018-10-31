@@ -43,3 +43,4 @@ set -o emacs
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 alias edit="code"
+alias l="ls -lah"
