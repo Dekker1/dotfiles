@@ -18,6 +18,7 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
+set -o emacs
 if zplug check zsh-users/zsh-history-substring-search; then
     bindkey '^[[A' history-substring-search-up
     bindkey '^[[B' history-substring-search-down
@@ -37,7 +38,6 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
 
-set -o emacs
 
 # Case insensitive autocompletion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
