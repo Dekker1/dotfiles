@@ -1,5 +1,6 @@
 source ~/.zplug/init.zsh
 
+zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/gpg-agent", from:oh-my-zsh
