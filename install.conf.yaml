@@ -21,14 +21,14 @@
     #   force: true
 
     ## VSCode settings
-    ~/Library/Application Support/Code/User/settings.json:
-      path: vscode/settings.json
-      if: '[[ "$(uname)" == "Darwin" ]]'
-      force: true
-    ~/.config/Code/User/settings.json:
-      path: vscode/settings.json
-      if: '[[ "$(uname)" == "Linux" ]]'
-      force: true
+    # ~/Library/Application Support/Code/User/settings.json:
+    #   path: vscode/settings.json
+    #   if: '[[ "$(uname)" == "Darwin" ]]'
+    #   force: true
+    # ~/.config/Code/User/settings.json:
+    #   path: vscode/settings.json
+    #   if: '[[ "$(uname)" == "Linux" ]]'
+    #   force: true
 
     ~/.zshenv: zsh/zshenv
     ~/.zshrc: zsh/zshrc

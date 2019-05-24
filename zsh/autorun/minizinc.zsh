@@ -8,8 +8,7 @@ function minidev() {
   fi
 
   # Link included libraries
-  ln -sf $MZNSOURCE/share/minizinc/* $MZNLIB
-  export MZN_STDLIB_DIR=$MZNLIB
+  export MZN_STDLIB_DIR=$MZNSOURCE/share/minizinc
 }
 
 function contains {

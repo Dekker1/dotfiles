@@ -43,5 +43,5 @@ setopt share_history          # share command history data
 # Case insensitive autocompletion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-alias edit="code"
+alias edit="emacs"
 alias l="ls -lah"

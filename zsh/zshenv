@@ -24,3 +24,6 @@ export MARS3="w-cah-640-2.infotech.monash.edu"
 
 # Vim
 export EDITOR="emacs"
+
+# fzf - Command line fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

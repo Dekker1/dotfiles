@@ -10,7 +10,6 @@
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
     "python.linting.pylintEnabled": false,
     "search.location": "panel",
     "terminal.integrated.shell.osx": "/bin/zsh",
