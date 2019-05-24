@@ -23,4 +23,4 @@ export MARS2="w-cah-640-3.infotech.monash.edu"
 export MARS3="w-cah-640-2.infotech.monash.edu"
 
 # Vim
-export EDITOR="vi"
+export EDITOR="emacs"
