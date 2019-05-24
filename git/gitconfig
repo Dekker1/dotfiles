@@ -1,0 +1,31 @@
+[alias]
+	co = checkout
+	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	prune = fetch --prune
+	stash-all = stash save --include-untracked
+	s = status
+	undo = reset --soft HEAD^
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+	interactive = auto
+[core]
+	excludesfile = ~/.gitignore
+	editor = vi
+[credential]
+	helper = cache
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[user]
+	name = Jip J. Dekker
+	email = jip@dekker.one

@@ -5,9 +5,10 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: git/.gitconfig
-    ~/.gitignore: git/.gitignore
-    ~/.tmux.conf: tools/.tmux.conf
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.tmux.conf: tools/tmux.conf
+    ~/.spacemacs: emacs/spacemacs
 
     ## Sublime Text settings
     # ~/Library/Application Support/Sublime Text 3/Packages/User:
@@ -29,8 +30,8 @@
       if: '[[ "$(uname)" == "Linux" ]]'
       force: true
 
-    ~/.zshenv: zsh/.zshenv
-    ~/.zshrc: zsh/.zshrc
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
