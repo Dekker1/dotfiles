@@ -38,12 +38,15 @@ values."
      ;; ----------------------------------------------------------------
      ivy
      emacs-lisp
+     (colors :variables
+        colors-enable-nyan-cat-progress-bar '(display-graphic-p)
+     )
 
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
      ;; Programming Languages ;;
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
      c-c++
-     go
+     (go :variables go-tab-width 4)
      python
 
      ;;;;;;;;;;;;;;;;;;;;;;
@@ -59,7 +62,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+    ;; flatland-theme
+    minizinc-mode
+   )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -131,13 +137,13 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+   dotspacemacs-themes '(flatland
+                         spacemacs-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("IBM Plex Mono"
                                :size 13
                                :weight normal
                                :width normal
@@ -314,6 +320,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (add-to-list 'auto-mode-alist '("\\.mzn$" . minizinc-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -325,10 +332,10 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yapfify pyvenv pytest pyenv-mode py-isort pip-requirements org-ref pdf-tools key-chord htmlize tablist live-py-mode hy-mode dash-functional helm-bibtex parsebib helm helm-core go-guru go-eldoc go-mode disaster cython-mode cmake-mode clang-format biblio biblio-core auctex-latexmk auctex anaconda-mode pythonic f xterm-color smeargle shell-pop orgit org-plus-contrib multi-term mmm-mode markdown-toc s markdown-mode magit-gitflow magit-popup gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger popup git-link gh-md evil-magit magit transient git-commit with-editor eshell-z eshell-prompt-extras esh-help dash flyspell-correct-ivy flyspell-correct auto-dictionary yaml-mode which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra lv helm-make flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))))
+    (minizinc-mode zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme exotica-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme rainbow-mode rainbow-identifiers color-identifiers-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements org-ref pdf-tools key-chord htmlize tablist live-py-mode hy-mode dash-functional helm-bibtex parsebib helm helm-core go-guru go-eldoc go-mode disaster cython-mode cmake-mode clang-format biblio biblio-core auctex-latexmk auctex anaconda-mode pythonic f xterm-color smeargle shell-pop orgit org-plus-contrib multi-term mmm-mode markdown-toc s markdown-mode magit-gitflow magit-popup gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger popup git-link gh-md evil-magit magit transient git-commit with-editor eshell-z eshell-prompt-extras esh-help dash flyspell-correct-ivy flyspell-correct auto-dictionary yaml-mode which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra lv helm-make flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:foreground "#f8f8f8" :background "#26292c")))))
