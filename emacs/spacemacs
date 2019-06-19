@@ -37,15 +37,14 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ivy
-     emacs-lisp
-     (colors :variables
-        colors-enable-nyan-cat-progress-bar '(display-graphic-p)
-     )
+     evil-commentary
+     vim-powerline
 
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
      ;; Programming Languages ;;
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
      c-c++
+     emacs-lisp
      (go :variables go-tab-width 4)
      python
 
@@ -63,7 +62,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
-    ;; flatland-theme
+    flatland-theme
     minizinc-mode
    )
    ;; A list of packages that cannot be updated.
@@ -144,7 +143,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("IBM Plex Mono"
-                               :size 13
+                               ;; :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -332,7 +331,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (minizinc-mode zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme exotica-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme rainbow-mode rainbow-identifiers color-identifiers-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements org-ref pdf-tools key-chord htmlize tablist live-py-mode hy-mode dash-functional helm-bibtex parsebib helm helm-core go-guru go-eldoc go-mode disaster cython-mode cmake-mode clang-format biblio biblio-core auctex-latexmk auctex anaconda-mode pythonic f xterm-color smeargle shell-pop orgit org-plus-contrib multi-term mmm-mode markdown-toc s markdown-mode magit-gitflow magit-popup gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger popup git-link gh-md evil-magit magit transient git-commit with-editor eshell-z eshell-prompt-extras esh-help dash flyspell-correct-ivy flyspell-correct auto-dictionary yaml-mode which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra lv helm-make flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))))
+    (powerline evil-commentary yapfify yaml-mode which-key wgrep use-package smex pyvenv pytest pyenv-mode py-isort pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra hy-mode helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx flatland-theme exec-path-from-shell evil-visualstar evil-escape elisp-slime-nav disaster diminish cython-mode counsel-projectile cmake-mode clang-format bind-map auto-dictionary auto-compile auctex-latexmk anaconda-mode ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
