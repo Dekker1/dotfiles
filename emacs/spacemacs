@@ -38,6 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      ivy
      evil-commentary
+     spacemacs-editing-visual
      vim-powerline
 
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -331,7 +332,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (powerline evil-commentary yapfify yaml-mode which-key wgrep use-package smex pyvenv pytest pyenv-mode py-isort pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra hy-mode helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx flatland-theme exec-path-from-shell evil-visualstar evil-escape elisp-slime-nav disaster diminish cython-mode counsel-projectile cmake-mode clang-format bind-map auto-dictionary auto-compile auctex-latexmk anaconda-mode ace-window))))
+    (volatile-highlights indent-guide highlight-parentheses highlight-numbers parent-mode highlight-indentation column-enforce-mode auto-highlight-symbol adaptive-wrap rainbow-delimiters rainbow-mode rainbow-identifiers color-identifiers-mode powerline evil-commentary yapfify yaml-mode which-key wgrep use-package smex pyvenv pytest pyenv-mode py-isort pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra hy-mode helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx flatland-theme exec-path-from-shell evil-visualstar evil-escape elisp-slime-nav disaster diminish cython-mode counsel-projectile cmake-mode clang-format bind-map auto-dictionary auto-compile auctex-latexmk anaconda-mode ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
