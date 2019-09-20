@@ -46,14 +46,16 @@ values."
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
      c-c++
      emacs-lisp
+     docker
      (go :variables go-tab-width 4)
      python
+     rust
 
      ;;;;;;;;;;;;;;;;;;;;;;
      ;; Markup Languages ;;
      ;;;;;;;;;;;;;;;;;;;;;;
      bibtex
-     latex
+     (latex :variables latex-build-command "latexmk")
      markdown
      yaml
      spell-checking
@@ -63,7 +65,6 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
-    flatland-theme
     minizinc-mode
    )
    ;; A list of packages that cannot be updated.
@@ -137,14 +138,14 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(flatland
+   dotspacemacs-themes '(spacemacs-light
                          spacemacs-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("IBM Plex Mono"
-                               ;; :size 13
+   dotspacemacs-default-font '("Fira Code"
+                               :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -242,7 +243,7 @@ values."
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
-   dotspacemacs-active-transparency 90
+dotspacemacs-active-transparency 90
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's inactive or deselected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -311,7 +312,10 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+  (setq-default
+   ispell-program-name "aspell"
+   fill-column 100
+   ))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -321,14 +325,44 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.mzn$" . minizinc-mode))
-  (setq ivy-extra-directories ()
-        counsel-find-file-ignore-regexp
-            (concat
-            ;; File names beginning with # or .
-            "\\(?:\\`[#.]\\)"
-            ;; File names ending with # or ~
-            "\\|\\(?:\\`.+?[#~]\\'\\)")
-  ))
+  (setq
+    ivy-extra-directories ()
+    counsel-find-file-ignore-regexp
+      (concat
+      ;; File names beginning with # or .
+      "\\(?:\\`[#.]\\)"
+      ;; File names ending with # or ~
+      "\\|\\(?:\\`.+?[#~]\\'\\)")
+    mac-option-modifier 'meta
+    mac-command-modifier 'hyper
+  )
+
+  (when (fboundp 'mac-auto-operator-composition-mode) (mac-auto-operator-composition-mode))
+  (global-set-key [(hyper a)] 'mark-whole-buffer)
+  (global-set-key [(hyper v)] 'yank)
+  (global-set-key [(hyper c)] 'kill-ring-save)
+  (global-set-key [(hyper s)] 'save-buffer)
+  (global-set-key [(hyper l)] 'goto-line)
+  (global-set-key [(hyper w)]
+                  (lambda () (interactive) (delete-window)))
+  (global-set-key [(hyper z)] 'undo)
+
+  ;; mac switch meta key
+  (defun mac-switch-meta nil
+    "switch meta between Option and Command"
+    (interactive)
+    (if (eq mac-option-modifier nil)
+      (progn
+        (setq mac-option-modifier 'meta)
+        (setq mac-command-modifier 'hyper)
+        )
+      (progn
+        (setq mac-option-modifier nil)
+        (setq mac-command-modifier 'meta)
+        )
+      )
+  )
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -339,10 +373,10 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (volatile-highlights indent-guide highlight-parentheses highlight-numbers parent-mode highlight-indentation column-enforce-mode auto-highlight-symbol adaptive-wrap rainbow-delimiters rainbow-mode rainbow-identifiers color-identifiers-mode powerline evil-commentary yapfify yaml-mode which-key wgrep use-package smex pyvenv pytest pyenv-mode py-isort pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra hy-mode helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx flatland-theme exec-path-from-shell evil-visualstar evil-escape elisp-slime-nav disaster diminish cython-mode counsel-projectile cmake-mode clang-format bind-map auto-dictionary auto-compile auctex-latexmk anaconda-mode ace-window))))
+    (toml-mode racer pos-tip cargo rust-mode multi-term dockerfile-mode docker json-mode magit-popup docker-tramp json-snatcher json-reformat yapfify yaml-mode which-key wgrep volatile-highlights use-package smex rainbow-delimiters pyvenv pytest pyenv-mode py-isort powerline pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra indent-guide hy-mode highlight-parentheses highlight-numbers highlight-indentation helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx exec-path-from-shell evil-visualstar evil-escape evil-commentary elisp-slime-nav disaster diminish cython-mode counsel-projectile column-enforce-mode cmake-mode clang-format bind-map auto-highlight-symbol auto-dictionary auto-compile auctex anaconda-mode adaptive-wrap ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#f8f8f8" :background "#26292c")))))
+ )
