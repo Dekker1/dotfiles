@@ -26,3 +26,15 @@ export EDITOR="emacs"
 
 # fzf - Command line fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# PyEnv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# pipx
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+
+
+export DYLD_INSERT_LIBRARIES="/Users/jdek0001/Documents/stderred/build/libstderred.dylib${DYLD_INSERT_LIBRARIES:+:$DYLD_INSERT_LIBRARIES}"
+
