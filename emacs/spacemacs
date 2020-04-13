@@ -38,7 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      ivy
      evil-commentary
-     spacemacs-editing-visual
+     spacemacs-evil
      vim-powerline
 
      ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -243,7 +243,7 @@ values."
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
-dotspacemacs-active-transparency 90
+  dotspacemacs-active-transparency 90
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's inactive or deselected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -315,7 +315,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default
    ispell-program-name "aspell"
    fill-column 100
-   ))
+   )
+)
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -371,9 +372,10 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(global-vi-tilde-fringe-mode nil)
  '(package-selected-packages
    (quote
-    (toml-mode racer pos-tip cargo rust-mode multi-term dockerfile-mode docker json-mode magit-popup docker-tramp json-snatcher json-reformat yapfify yaml-mode which-key wgrep volatile-highlights use-package smex rainbow-delimiters pyvenv pytest pyenv-mode py-isort powerline pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra indent-guide hy-mode highlight-parentheses highlight-numbers highlight-indentation helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx exec-path-from-shell evil-visualstar evil-escape evil-commentary elisp-slime-nav disaster diminish cython-mode counsel-projectile column-enforce-mode cmake-mode clang-format bind-map auto-highlight-symbol auto-dictionary auto-compile auctex anaconda-mode adaptive-wrap ace-window))))
+    (vi-tilde-fringe linum-relative evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu toml-mode racer pos-tip cargo rust-mode multi-term dockerfile-mode docker json-mode magit-popup docker-tramp json-snatcher json-reformat yapfify yaml-mode which-key wgrep volatile-highlights use-package smex rainbow-delimiters pyvenv pytest pyenv-mode py-isort powerline pip-requirements pcre2el org-ref mmm-mode minizinc-mode markdown-toc macrostep live-py-mode ivy-hydra indent-guide hy-mode highlight-parentheses highlight-numbers highlight-indentation helm-make go-guru go-eldoc gh-md flyspell-correct-ivy flx exec-path-from-shell evil-visualstar evil-escape evil-commentary elisp-slime-nav disaster diminish cython-mode counsel-projectile column-enforce-mode cmake-mode clang-format bind-map auto-highlight-symbol auto-dictionary auto-compile auctex anaconda-mode adaptive-wrap ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
