@@ -9,6 +9,10 @@
     ~/.gitignore: git/gitignore
     ~/.tmux.conf: tools/tmux.conf
     # ~/.spacemacs: emacs/spacemacs
+    ~/.config/:
+      glob: true
+      path: config/*
+      relink: true
 
     ## Sublime Text settings
     # ~/Library/Application Support/Sublime Text 3/Packages/User:

@@ -1,0 +1,16 @@
+# Open applications
+cmd - return : osascript -e 'tell application "kitty" to activate' -e 'tell application "System Events" to tell process "kitty" to keystroke "n" using command down'
+# cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "n" using command down'
+
+# Focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# Swap window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
