@@ -8,7 +8,7 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
     ~/.tmux.conf: tools/tmux.conf
-    ~/.spacemacs: emacs/spacemacs
+    # ~/.spacemacs: emacs/spacemacs
 
     ## Sublime Text settings
     # ~/Library/Application Support/Sublime Text 3/Packages/User:
