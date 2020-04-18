@@ -11,12 +11,13 @@ Plug 'junegunn/limelight.vim'
 """ Functionality
 " Language Server
 Plug 'neovim/nvim-lsp'
+" Tools
+Plug 'kdheepak/lazygit.vim'
 
 """ Languages
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'pest-parser/pest.vim', { 'for': 'pest' }
-
 
 call plug#end()
 
@@ -30,6 +31,7 @@ syntax on
 
 " Keybindings
 :let mapleader = " "
+:nnoremap <silent> <leader>lg :LazyGit<CR>
 
 " Line numbers
 set relativenumber
