@@ -1,6 +1,5 @@
 # Open applications
-cmd - return : osascript -e 'tell application "kitty" to activate' -e 'tell application "System Events" to tell process "kitty" to keystroke "n" using command down'
-# cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "n" using command down'
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # Focus window
 alt - h : yabai -m window --focus west
