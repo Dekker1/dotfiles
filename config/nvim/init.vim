@@ -38,7 +38,7 @@ set relativenumber
 set numberwidth=1
 
 " Change default filling characters
-set fillchars=vert:\│,eob:\
+set fillchars=eob:\ ,vert:\│
 
 """ Functionality
 " Language Servers
