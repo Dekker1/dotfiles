@@ -3,8 +3,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 """ Appearance plugins
-Plug 'arcticicestudio/nord-vim'
-
+Plug 'andreypopp/vim-colors-plain'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -24,7 +23,7 @@ call plug#end()
 """ Appearance
 " Colour scheme
 set termguicolors
-colorscheme nord
+colorscheme plain
 
 " Vi options
 syntax on
