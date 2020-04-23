@@ -1,14 +1,14 @@
-# Bison
+### C++ ###
+# Newer Bison version
 [ -d "/usr/local/opt/bison/bin" ] && export PATH="/usr/local/opt/bison/bin:$PATH"
-
-# Flex
+# Newer Flex version
 [ -d "/usr/local/opt/flex/bin" ] && export PATH="/usr/local/opt/flex/bin:$PATH"
-
-# Gecode
-export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
-
-# Clangd
+# Other LLVM tools (like clangd)
 [ -d "/usr/local/opt/llvm/bin" ] && export PATH="$PATH:/usr/local/opt/llvm/bin"
+# CMake output compile_commands.json
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
+# CMake use Ninja by default
+export CMAKE_GENERATOR="Ninja"
 
 # Build directory
 [ -d "$HOME/build" ] && export PATH="$HOME/build/bin:$PATH"
