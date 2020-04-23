@@ -29,7 +29,7 @@ colorscheme plain
 syntax on
 
 " Keybindings
-:let mapleader = " "
+:let mapleader = "\<space>"
 :nnoremap <silent> <leader>lg :LazyGit<CR>
 
 " Line numbers
