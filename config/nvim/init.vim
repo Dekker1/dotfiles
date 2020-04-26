@@ -35,7 +35,7 @@ set expandtab
 colorscheme plain
 
 """ Keybindings
-let mapleader = " "
+let mapleader = "\<space>"
 
 " Buffers
 " Switch to previous buffer
