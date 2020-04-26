@@ -29,8 +29,13 @@ export MARS3="w-cah-640-2.infotech.monash.edu"
 
 # Neovim
 export EDITOR="nvim"
+alias edit="nvim"
 alias vi=nvim
+alias ni=nvim
 alias vim=nvim
+
+# ls
+alias l="ls -lah"
 
 # fzf - Command line fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
