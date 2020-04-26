@@ -5,7 +5,6 @@ call plug#begin(stdpath('data') . '/plugged')
 """ Appearance plugins
 Plug 'andreypopp/vim-colors-plain'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 
 """ Functionality
 " Language Server
@@ -21,8 +20,15 @@ Plug 'pest-parser/pest.vim', { 'for': 'pest' }
 call plug#end()
 
 """ Appearance
-" Colour scheme
+" Vi options
 set termguicolors
+syntax on
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Colour scheme
 colorscheme plain
 
 " Vi options
@@ -33,13 +39,18 @@ syntax on
 :nnoremap <silent> <leader>lg :LazyGit<CR>
 
 " Line numbers
-set relativenumber
+set number relativenumber
 set numberwidth=1
 
 " Change default filling characters
 set fillchars=eob:\ ,vert:\│
 
 """ Functionality
+" Vi behaviour
+set clipboard+=unnamedplus " Use system clipboard
+set autowriteall " Save modified files before changing buffer or closing window
+au FocusLost * silent! wa " Save file when Vi loses focus
+
 " Language Servers
 set omnifunc=v:lua.vim.lsp.omnifunc
 
@@ -47,8 +58,16 @@ set omnifunc=v:lua.vim.lsp.omnifunc
 " Rust
 lua require'nvim_lsp'.rust_analyzer.setup{}
 let g:rustfmt_autosave = 1
+autocmd Filetype rust setlocal tabstop=4 shiftwidth=4 expandtab
+
 " Python
 lua require'nvim_lsp'.pyls.setup{}
+autocmd Filetype python setlocal tabstop=4 shiftwidth=4 expandtab
+
+" C/C++
+lua require'nvim_lsp'.clangd.setup{}
+autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
 
 """ Load other configuration parts
 execute 'source ' . stdpath('config') . '/statusline.vim'
