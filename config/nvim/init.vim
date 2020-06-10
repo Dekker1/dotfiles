@@ -27,12 +27,18 @@ call plug#end()
 set termguicolors
 syntax on
 
+set laststatus=2                       " enable statusbar
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
 " Colour scheme
+set background=light
 colorscheme plain
+
+" Colour additions
+highlight cursorlinenr term=bold ctermfg=1 ctermbg=NONE
+highlight matchparen ctermbg=0 ctermfg=NONE
 
 """ Keybindings
 let mapleader = "\<space>"
@@ -77,22 +83,35 @@ nnoremap <leader>w <C-w>
 nnoremap <silent> <leader>jb <C-o>
 nnoremap <silent> <leader>jd <cmd>lua vim.lsp.buf.definition()<CR>
 
-" Paste will replace in visual mode
-vnoremap p "_dP
+""" Functionality
+" Vi behaviour
+set encoding=utf-8
+set clipboard+=unnamedplus " Use system clipboard
+set autowriteall " Save modified files before changing buffer or closing window
+au FocusLost * silent! wa " Save file when Vi loses focus
+
+" Search
+set ignorecase
+set smartcase
 
 " Line numbers
 set number relativenumber
 set numberwidth=1
 
+" Spelling checker
+set spell
+set spellcapcheck=                            " Don't check for capital letters at the start of sentence
+set spelllang=en,nl
 " Change default filling characters
 set fillchars=eob:\ ,vert:\│
+set list
+set listchars=tab:\│\ ,nbsp:␣,trail:·
 
-""" Functionality
-" Vi behaviour
-set clipboard+=unnamedplus " Use system clipboard
-set autowriteall " Save modified files before changing buffer or closing window
-au FocusLost * silent! wa " Save file when Vi loses focus
+" Backspace through anything
+set backspace=indent,eol,start
 
+" Paste will replace in visual mode
+vnoremap p "_dP
 " Language Servers
 set omnifunc=v:lua.vim.lsp.omnifunc
 
@@ -110,6 +129,3 @@ autocmd Filetype python setlocal tabstop=4 shiftwidth=4 expandtab
 lua require'nvim_lsp'.clangd.setup{}
 autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
-
-""" Load other configuration parts
-execute 'source ' . stdpath('config') . '/statusline.vim'
