@@ -26,6 +26,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export MARS="w-cah-640-4.infotech.monash.edu"
 export MARS2="w-cah-640-3.infotech.monash.edu"
 export MARS3="w-cah-640-2.infotech.monash.edu"
+export BIGBAD="118.138.238.195"
 
 # Neovim
 export EDITOR="nvim"
