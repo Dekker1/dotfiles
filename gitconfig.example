@@ -18,12 +18,6 @@
 	gpgSign = true
 [credential]
 	helper = GIT_CREDENTIAL_HELPER
-[diff]
-  tool = icdiff
-[difftool]
-  prompt = false
-[difftool "icdiff"]
-  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [help]
 	autocorrect = 1
 [push]
