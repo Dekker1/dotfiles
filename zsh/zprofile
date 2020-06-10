@@ -8,7 +8,7 @@
 # CMake output compile_commands.json
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
 # CMake use Ninja by default
-export CMAKE_GENERATOR="Ninja"
+export CMAKE_GENERATOR="Ninja Multi-Config"
 
 # Build directory
 [ -d "$HOME/build" ] && export PATH="$HOME/build/bin:$PATH"
