@@ -97,10 +97,10 @@ function! Modified() abort
 	endif
 endfunction
 
-highlight user1 ctermbg=1 guibg=#d12f2c ctermfg=0 guifg=#fefefe
-highlight user2 ctermbg=1 guibg=#d12f2c ctermfg=0 guifg=#fefefe
-highlight user3 ctermbg=8 guibg=#efeddf ctermfg=NONE guifg=NONE
+highlight user1 ctermbg=1 guibg=#af4b57 ctermfg=0 guifg=#000000
+highlight user2 ctermbg=1 guibg=#af4b57 ctermfg=0 guifg=#000000
+highlight user3 ctermbg=8 guibg=#000000 ctermfg=NONE guifg=NONE
 highlight user4 ctermbg=NONE ctermfg=NONE guifg=NONE guibg=NONE
-highlight group1 ctermbg=NONE ctermfg=0 guibg=NONE guifg=#fefefe
+highlight group1 ctermbg=NONE ctermfg=0 guibg=NONE guifg=#000000
 
 set statusline=%!StatusLine()

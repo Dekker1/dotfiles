@@ -2,7 +2,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 """ Appearance plugins
-Plug 'andreypopp/vim-colors-plain'
+Plug 'Dekker1/vim-colors-plain'
 
 Plug 'junegunn/goyo.vim'
 
@@ -33,7 +33,7 @@ set shiftwidth=2
 set expandtab
 
 " Colour scheme
-set background=light
+set background=dark
 colorscheme plain
 
 " Colour additions
