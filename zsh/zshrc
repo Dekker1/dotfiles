@@ -86,6 +86,11 @@ if command -v exa &> /dev/null; then
 else
   alias l="ls -lah"
 fi
+# cat
+if command -v bat &> /dev/null; then
+  alias cat="bat"
+  alias less="bat"
+fi
 
 # fzf - Command line fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
