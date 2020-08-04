@@ -34,7 +34,6 @@
     #   if: '[[ "$(uname)" == "Linux" ]]'
     #   force: true
 
-    ~/.zprofile: zsh/zprofile
     ~/.zshrc: zsh/zshrc
 
 - shell:
