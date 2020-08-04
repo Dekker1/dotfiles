@@ -43,3 +43,58 @@ setopt share_history          # share command history data
 # Case insensitive autocompletion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
+### C++ ###
+# Newer Bison version
+[ -d "/usr/local/opt/bison/bin" ] && export PATH="/usr/local/opt/bison/bin:$PATH"
+# Newer Flex version
+[ -d "/usr/local/opt/flex/bin" ] && export PATH="/usr/local/opt/flex/bin:$PATH"
+# Other LLVM tools (like clangd)
+[ -d "/usr/local/opt/llvm/bin" ] && export PATH="$PATH:/usr/local/opt/llvm/bin"
+# CMake output compile_commands.json
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
+# CMake use Ninja by default
+export CMAKE_GENERATOR="Ninja Multi-Config"
+
+# Build directory
+[ -d "$HOME/build" ] && export PATH="$HOME/build/bin:$PATH"
+[ -d "$HOME/build" ] && export LD_LIBRARY_PATH="$HOME/build/lib:$LD_LIBRARY_PATH"
+
+# Golang
+[ -d "$HOME/build" ] && export GOPATH="$HOME/build"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# MiniZinc
+[ -d "/Applications/MiniZincIDE.app" ] && export PATH="/Applications/MiniZincIDE.app/Contents/Resources:$PATH"
+export MARS="w-cah-640-4.infotech.monash.edu"
+export MARS2="w-cah-640-3.infotech.monash.edu"
+export MARS3="w-cah-640-2.infotech.monash.edu"
+export BIGBAD="118.138.238.195"
+
+# Neovim
+export EDITOR="nvim"
+alias edit="nvim"
+alias vi="nvim"
+alias ni="nvim"
+alias vim="nvim"
+
+# ls
+if command -v exa &> /dev/null; then
+  alias ls="exa"
+  alias l="exa -la"
+else
+  alias l="ls -lah"
+fi
+
+# fzf - Command line fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# PyEnv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# pipx
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+
