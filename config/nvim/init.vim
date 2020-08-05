@@ -19,6 +19,8 @@ Plug 'junegunn/fzf.vim'      " Add fuzzy file/line/everything searcher
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'pest-parser/pest.vim', { 'for': 'pest' }
+" Python
+Plug 'psf/black'
 
 call plug#end()
 
@@ -82,6 +84,7 @@ nnoremap <leader>w <C-w>
 " Jumping
 nnoremap <silent> <leader>jb <C-o>
 nnoremap <silent> <leader>jd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>jr <cmd>lua vim.lsp.buf.references()<CR>
 
 """ Functionality
 " Vi behaviour
@@ -112,6 +115,7 @@ set backspace=indent,eol,start
 
 " Paste will replace in visual mode
 vnoremap p "_dP
+
 " Language Servers
 set omnifunc=v:lua.vim.lsp.omnifunc
 
@@ -129,3 +133,4 @@ autocmd Filetype python setlocal tabstop=4 shiftwidth=4 expandtab
 lua require'nvim_lsp'.clangd.setup{}
 autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
+" autocmd BufWritePre *.c,*.cpp,*.h,*.hh,*.hpp lua vim.lsp.buf.formatting_sync(nil, 1000)
