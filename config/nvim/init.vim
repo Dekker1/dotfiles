@@ -10,7 +10,7 @@ Plug 'junegunn/goyo.vim'
 " Language Server
 Plug 'neovim/nvim-lsp'
 " Tools
-Plug 'kdheepak/lazygit.vim'  " Add LazyGit integration
+Plug 'voldikss/vim-floaterm' " Floating Windows
 Plug 'tpope/vim-commentary'  " comment using gc keybinding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'      " Add fuzzy file/line/everything searcher
@@ -65,8 +65,10 @@ fun! DeleteFileAndCloseBuffer()
 endfun
 nnoremap <leader>fd :call DeleteFileAndCloseBuffer()<CR>
 " Open file using FZF
-nnoremap <leader>ff :Files<CR>
+" nnoremap <leader>ff :Files<CR>
+nnoremap <leader>ff :FloatermNew fzf --preview 'head -100 {}'<CR>
 " Search file content in current directory
+" TODO: Replace with custom command
 nnoremap <leader>fg :Rg 
 " Save current file
 nnoremap <leader>fs :w<CR>
@@ -76,7 +78,12 @@ nnoremap <leader>fS :wa<CR>
 nnoremap <leader>fy :let @+ = expand('%:p')<cr>
 
 " Git / Version control
-nnoremap <silent> <leader>g :LazyGit<CR>
+nnoremap <silent> <leader>g :FloatermNew --name=git --autoclose=1 lazygit<CR>
+" Terminal
+autocmd VimEnter * ++once ++nested FloatermNew --name=zsh --autoclose=0
+autocmd VimEnter * ++once ++nested FloatermHide zsh
+nnoremap <silent> <leader>t :FloatermToggle zsh<CR>
+tnoremap <Esc> <C-\><C-n>
 
 " Window control
 nnoremap <leader>w <C-w>
@@ -105,6 +112,11 @@ set numberwidth=1
 set spell
 set spellcapcheck=                            " Don't check for capital letters at the start of sentence
 set spelllang=en,nl
+
+" Floating windows
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.8
+
 " Change default filling characters
 set fillchars=eob:\ ,vert:\│
 set list
