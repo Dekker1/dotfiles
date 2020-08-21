@@ -1,25 +1,25 @@
 scriptencoding utf-8
 
 let g:curmode={
-	\ 'n'  : 'NORMAL ',
-	\ 'no' : 'N·OPERATOR PENDING ',
-	\ 'v'  : 'VISUAL ',
-	\ 'V'  : 'V·LINE ',
-	\ '^V' : 'V·BLOCK ',
-	\ 's'  : 'SELECT ',
-	\ 'S'  : 'S·LINE ',
-	\ '^S' : 'S·BLOCK ',
-	\ 'i'  : 'INSERT ',
-	\ 'R'  : 'REPLACE ',
-	\ 'Rv' : 'V·REPLACE ',
-	\ 'c'  : 'COMMAND ',
-	\ 'cv' : 'VIM EX ',
-	\ 'ce' : 'EX ',
-	\ 'r'  : 'PROMPT ',
-	\ 'rm' : 'MORE ',
-	\ 'r?' : 'CONFIRM ',
-	\ '!'  : 'SHELL ',
-	\ 't'  : 'TERMINAL '}
+	\ 'n'      : 'NORMAL ',
+	\ 'no'     : 'N·OPERATOR PENDING ',
+	\ 'v'      : 'VISUAL ',
+	\ 'V'      : 'V·LINE ',
+	\ "\<C-V>" : 'V·BLOCK ',
+	\ 's'      : 'SELECT ',
+	\ 'S'      : 'S·LINE ',
+	\ "\<C-S>" : 'S·BLOCK ',
+	\ 'i'      : 'INSERT ',
+	\ 'R'      : 'REPLACE ',
+	\ 'Rv'     : 'V·REPLACE ',
+	\ 'c'      : 'COMMAND ',
+	\ 'cv'     : 'VIM EX ',
+	\ 'ce'     : 'EX ',
+	\ 'r'      : 'PROMPT ',
+	\ 'rm'     : 'MORE ',
+	\ 'r?'     : 'CONFIRM ',
+	\ '!'      : 'SHELL ',
+	\ 't'      : 'TERMINAL '}
 
 function! StatusLine() abort
 	let l:line=''
