@@ -44,7 +44,7 @@ function! GitBranch()
 	let l:command=''
 	let l:command.="sh -c 'cd "
 	let l:command.=SessionDir()
-	let l:command.=" && git rev-parse --abbrev-ref HEAD'\n"
+	let l:command.=" && git rev-parse --abbrev-ref HEAD 2>/dev/null'\n"
 	return substitute(system(l:command), '\n', '', 'g')
 endfunction
 
