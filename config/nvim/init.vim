@@ -16,11 +16,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'      " Add fuzzy file/line/everything searcher
 
 """ Languages
+" MiniZinc
+Plug 'vale1410/vim-minizinc', { 'for': 'zinc' }
+" Python
+Plug 'psf/black', { 'for': 'python' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'pest-parser/pest.vim', { 'for': 'pest' }
-" Python
-Plug 'psf/black'
 
 call plug#end()
 
@@ -120,6 +122,13 @@ vnoremap p "_dP
 set omnifunc=v:lua.vim.lsp.omnifunc
 
 """ Languages
+" C/C++
+lua require'nvim_lsp'.clangd.setup{}
+autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype c setlocal commentstring=//\ %s
+autocmd Filetype cpp setlocal commentstring=//\ %s
+
 " Rust
 lua require'nvim_lsp'.rust_analyzer.setup{}
 let g:rustfmt_autosave = 1
@@ -129,8 +138,7 @@ autocmd Filetype rust setlocal tabstop=4 shiftwidth=4 expandtab
 lua require'nvim_lsp'.pyls.setup{}
 autocmd Filetype python setlocal tabstop=4 shiftwidth=4 expandtab
 
-" C/C++
-lua require'nvim_lsp'.clangd.setup{}
-autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
+" MiniZinc
+autocmd Filetype zinc setlocal commentstring=\%\ %s
+
 " autocmd BufWritePre *.c,*.cpp,*.h,*.hh,*.hpp lua vim.lsp.buf.formatting_sync(nil, 1000)
