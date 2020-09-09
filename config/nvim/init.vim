@@ -16,6 +16,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'      " Add fuzzy file/line/everything searcher
 
 """ Languages
+" C
+Plug 'rhysd/vim-clang-format'
 " MiniZinc
 Plug 'vale1410/vim-minizinc', { 'for': 'zinc' }
 " Python
@@ -123,6 +125,8 @@ set omnifunc=v:lua.vim.lsp.omnifunc
 
 """ Languages
 " C/C++
+let g:clang_format#enable_fallback_style = 0
+let g:clang_format#auto_format = 1
 lua require'nvim_lsp'.clangd.setup{}
 autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
