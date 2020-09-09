@@ -2,7 +2,6 @@ source ~/.zplug/init.zsh
 
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "plugins/history-substring-search", from:oh-my-zsh
@@ -44,6 +43,8 @@ setopt share_history          # share command history data
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 ### C++ ###
+# Use CCache when possible
+[ -d "/usr/local/opt/ccache/libexec" ] && export PATH="/usr/local/opt/ccache/libexec:$PATH"
 # Newer Bison version
 [ -d "/usr/local/opt/bison/bin" ] && export PATH="/usr/local/opt/bison/bin:$PATH"
 # Newer Flex version
@@ -63,10 +64,10 @@ export CMAKE_GENERATOR="Ninja Multi-Config"
 [ -d "$HOME/build" ] && export GOPATH="$HOME/build"
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # MiniZinc
-[ -d "/Applications/MiniZincIDE.app" ] && export PATH="/Applications/MiniZincIDE.app/Contents/Resources:$PATH"
+[ -d "/Applications/MiniZincIDE.app" ] && export PATH="$PATH:/Applications/MiniZincIDE.app/Contents/Resources"
 export MARS="w-cah-640-4.infotech.monash.edu"
 export MARS2="w-cah-640-3.infotech.monash.edu"
 export MARS3="w-cah-640-2.infotech.monash.edu"
@@ -98,6 +99,9 @@ if command -v fd &> /dev/null; then
   export FZF_DEFAULT_COMMAND='fd --type f'
 fi
 
+if command -v pazi &>/dev/null; then
+  eval "$(pazi init zsh)"
+fi
 
 # PyEnv
 if command -v pyenv 1>/dev/null 2>&1; then
