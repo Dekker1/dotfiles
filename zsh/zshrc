@@ -6,7 +6,6 @@ zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "plugins/history-substring-search", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "geometry-zsh/geometry"
 
 zplug "~/.dotfiles/zsh/autorun/", from:local
 
@@ -111,3 +110,5 @@ fi
 # pipx
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 
+# Start Starship Prompt
+eval "$(starship init zsh)"
