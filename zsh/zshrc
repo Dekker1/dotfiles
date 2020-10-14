@@ -42,8 +42,6 @@ setopt share_history          # share command history data
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 ### C++ ###
-# Use CCache when possible
-[ -d "/usr/local/opt/ccache/libexec" ] && export PATH="/usr/local/opt/ccache/libexec:$PATH"
 # Newer Bison version
 [ -d "/usr/local/opt/bison/bin" ] && export PATH="/usr/local/opt/bison/bin:$PATH"
 # Newer Flex version
@@ -66,7 +64,6 @@ export CMAKE_GENERATOR="Ninja Multi-Config"
 export PATH="$PATH:$HOME/.cargo/bin"
 
 # MiniZinc
-[ -d "/Applications/MiniZincIDE.app" ] && export PATH="$PATH:/Applications/MiniZincIDE.app/Contents/Resources"
 export MARS="w-cah-640-4.infotech.monash.edu"
 export MARS2="w-cah-640-3.infotech.monash.edu"
 export MARS3="w-cah-640-2.infotech.monash.edu"
