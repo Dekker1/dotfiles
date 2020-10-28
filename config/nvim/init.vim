@@ -2,7 +2,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 """ Appearance plugins
-Plug 'Dekker1/vim-colors-plain'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'junegunn/goyo.vim'
 
@@ -38,7 +38,7 @@ set expandtab
 
 " Colour scheme
 set background=dark
-colorscheme plain
+colorscheme nord
 
 " Colour additions
 highlight cursorlinenr term=bold ctermfg=1 ctermbg=NONE
