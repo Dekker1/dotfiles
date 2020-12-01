@@ -125,7 +125,7 @@ set omnifunc=v:lua.vim.lsp.omnifunc
 " C/C++
 let g:clang_format#enable_fallback_style = 0
 let g:clang_format#auto_format = 1
-lua require'nvim_lsp'.clangd.setup{}
+lua require'lspconfig'.clangd.setup{}
 autocmd Filetype c setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype c setlocal commentstring=//\ %s
@@ -133,12 +133,12 @@ autocmd Filetype cpp setlocal commentstring=//\ %s
 autocmd BufWritePre *.c,*.cc,*.cpp,*.h,*.hh,*.hpp lua vim.lsp.buf.formatting_sync(nil, 1000)
 
 " Rust
-lua require'nvim_lsp'.rust_analyzer.setup{}
+lua require'lspconfig'.rust_analyzer.setup{}
 let g:rustfmt_autosave = 1
 autocmd Filetype rust setlocal tabstop=4 shiftwidth=4 expandtab
 
 " Python
-lua require'nvim_lsp'.pyls.setup{}
+lua require'lspconfig'.pyls.setup{}
 autocmd Filetype python setlocal tabstop=4 shiftwidth=4 expandtab
 
 " MiniZinc
