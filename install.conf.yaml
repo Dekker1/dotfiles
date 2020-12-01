@@ -10,6 +10,7 @@
     ~/.tmux.conf: tools/tmux.conf
     ~/.Brewfile: Brewfile
     # ~/.spacemacs: emacs/spacemacs
+    ~/.doom.d: emacs/doom.d
     ~/.config/:
       glob: true
       path: config/*
