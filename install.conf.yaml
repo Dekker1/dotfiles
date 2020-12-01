@@ -8,6 +8,7 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
     ~/.tmux.conf: tools/tmux.conf
+    ~/.Brewfile: Brewfile
     # ~/.spacemacs: emacs/spacemacs
     ~/.config/:
       glob: true

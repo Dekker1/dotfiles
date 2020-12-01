@@ -97,6 +97,7 @@ fi
 
 if command -v pazi &>/dev/null; then
   eval "$(pazi init zsh)"
+  alias zf='z --pipe="fzf"'
 fi
 
 # PyEnv
@@ -106,6 +107,9 @@ fi
 
 # pipx
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+
+# java
+[ -d "/usr/local/opt/openjdk/bin" ] && export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # Start Starship Prompt
 eval "$(starship init zsh)"
