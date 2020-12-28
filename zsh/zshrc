@@ -1,4 +1,5 @@
-source ~/.zplug/init.zsh
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -37,82 +38,14 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
 
-
 # Case insensitive autocompletion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-### C++ ###
-# Newer Bison version
-[ -d "/usr/local/opt/bison/bin" ] && export PATH="/usr/local/opt/bison/bin:$PATH"
-# Newer Flex version
-[ -d "/usr/local/opt/flex/bin" ] && export PATH="/usr/local/opt/flex/bin:$PATH"
-# Other LLVM tools (like clangd)
-[ -d "/usr/local/opt/llvm/bin" ] && export PATH="$PATH:/usr/local/opt/llvm/bin"
-# CMake output compile_commands.json
-export CMAKE_EXPORT_COMPILE_COMMANDS=1
-# CMake use Ninja by default
-export CMAKE_GENERATOR="Ninja Multi-Config"
-
-# Build directory
-[ -d "$HOME/build" ] && export PATH="$HOME/build/bin:$PATH"
-[ -d "$HOME/build" ] && export LD_LIBRARY_PATH="$HOME/build/lib:$LD_LIBRARY_PATH"
-
-# Golang
-[ -d "$HOME/build" ] && export GOPATH="$HOME/build"
-
-# Rust
-export PATH="$PATH:$HOME/.cargo/bin"
-
 # MiniZinc
-export MARS="w-cah-640-4.infotech.monash.edu"
-export MARS2="w-cah-640-3.infotech.monash.edu"
-export MARS3="w-cah-640-2.infotech.monash.edu"
 export BIGBAD="118.138.238.195"
 
-# Neovim
-alias vi="nvim"
-alias ni="nvim"
-alias vim="nvim"
-
-# Emacs
-export EDITOR="emacsclient -nw"
-alias edit="emacsclient -nw"
-[ -d "$HOME/.emacs.d/bin" ] && export PATH="$HOME/.emacs.d/bin:$PATH"
-
-# ls
-if command -v exa &> /dev/null; then
-  alias ls="exa"
-  alias l="exa -la"
-else
-  alias l="ls -lah"
-fi
-# cat
-if command -v bat &> /dev/null; then
-  alias cat="bat"
-  alias less="bat"
-fi
-
-# fzf - Command line fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if command -v fd &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='fd --type f'
-fi
-
-if command -v pazi &>/dev/null; then
-  eval "$(pazi init zsh)"
-  alias zf='z --pipe="fzf"'
-fi
-
-# PyEnv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-# pipx
-[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
-
-# java
-[ -d "/usr/local/opt/openjdk/bin" ] && export PATH="/usr/local/opt/openjdk/bin:$PATH"
-
 # Start Starship Prompt
-eval "$(starship init zsh)"
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+else
+fi
