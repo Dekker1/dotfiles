@@ -28,7 +28,7 @@ brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "pipx"
 brew "ripgrep"
-brew "rustup-init"
+brew "rust"
 brew "starship"
 brew "tectonic"
 brew "dekker1/minizinc/fzn-chuffed"
