@@ -5,40 +5,16 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore: git/gitignore
-    ~/.tmux.conf: tools/tmux.conf
     ~/.Brewfile: Brewfile
-    # ~/.spacemacs: emacs/spacemacs
-    ~/.doom.d: emacs/doom.d
     ~/.config/:
       glob: true
       path: config/*
       relink: true
-
-    ## Sublime Text settings
-    # ~/Library/Application Support/Sublime Text 3/Packages/User:
-    #   path: subl
-    #   if: '[[ "$(uname)" == "Darwin" ]]'
-    #   force: true
-    # ~/.config/sublime-text-3/Packages/User:
-    #   path: subl
-    #   if: '[[ "$(uname)" == "Linux" ]]'
-    #   force: true
-
-    ## VSCode settings
-    # ~/Library/Application Support/Code/User/settings.json:
-    #   path: vscode/settings.json
-    #   if: '[[ "$(uname)" == "Darwin" ]]'
-    #   force: true
-    # ~/.config/Code/User/settings.json:
-    #   path: vscode/settings.json
-    #   if: '[[ "$(uname)" == "Linux" ]]'
-    #   force: true
-
+    ~/.doom.d: emacs/doom.d
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.tmux.conf: tools/tmux.conf
     ~/.zshrc: zsh/zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - ["[ -d \"$HOME/.zplug\" ] || curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh", Install ZPlug]
-  # - [cat vscode/package_list.txt | while read p; do code --install-extension $p; done, Install VSCode extenstions]
