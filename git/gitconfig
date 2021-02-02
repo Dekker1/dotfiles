@@ -14,14 +14,10 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vi
+[commit]
+	gpgSign = true
 [credential]
-	helper = cache
-[diff]
-  tool = icdiff
-[difftool]
-  prompt = false
-[difftool "icdiff"]
-  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+	helper = osxkeychain
 [help]
 	autocorrect = 1
 [push]
@@ -29,3 +25,4 @@
 [user]
 	name = Jip J. Dekker
 	email = jip@dekker.one
+	signingkey = 517DF4A00618C9C3
