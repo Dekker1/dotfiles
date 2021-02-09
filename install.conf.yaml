@@ -1,8 +1,13 @@
 - defaults:
     link:
+      create: true
       relink: true
 
-- clean: ['~']
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 
 - link:
     ~/.Brewfile: Brewfile
@@ -13,8 +18,9 @@
     ~/.doom.d: emacs/doom.d
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
+    ~/.ssh/config: ssh/config
     ~/.tmux.conf: tools/tmux.conf
     ~/.zshrc: zsh/zshrc
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
