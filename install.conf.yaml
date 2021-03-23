@@ -18,6 +18,7 @@
     ~/.doom.d: emacs/doom.d
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
+    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.ssh/config: ssh/config
     ~/.tmux.conf: tools/tmux.conf
     ~/.zshrc: zsh/zshrc
