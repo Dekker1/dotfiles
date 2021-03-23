@@ -6,4 +6,5 @@ yabai -m config right_padding                0
 yabai -m config window_gap                   1
 
 yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="^Sublime Merge$" manage=off
+yabai -m rule --add app="^Sublime Merge$" manage=off sticky=on
+yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on

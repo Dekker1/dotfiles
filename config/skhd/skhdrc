@@ -1,6 +1,9 @@
 # Open applications
 cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
+# Focus display
+ctrl - tab : yabai -m display --focus recent
+
 # Focus window
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
