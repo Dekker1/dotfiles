@@ -22,6 +22,7 @@ brew "gh"
 brew "gnupg"
 brew "go"
 brew "hugo"
+brew "languagetool"
 brew "lazygit"
 brew "llvm"
 brew "mas"
@@ -32,8 +33,8 @@ brew "pipenv"
 brew "pipx"
 brew "prettier"
 brew "ripgrep"
-brew "rust"
 brew "rust-analyzer"
+brew "rustup-init"
 brew "starship"
 brew "tectonic"
 brew "zplug"
@@ -65,4 +66,5 @@ mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "Textual IRC Client", id: 896450579
 mas "The Unarchiver", id: 425424353
+mas "Things", id: 904280696
 mas "Xcode", id: 497799835
