@@ -1,2 +1,6 @@
 Host *
     UseKeychain yes
+
+Host compute.optimisation-2020.cloud.edu.au
+    HostName compute.optimisation-2020.cloud.edu.au
+    User dekker1

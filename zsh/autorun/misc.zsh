@@ -4,4 +4,4 @@
 alias reload='. ~/.zshrc'
 
 # MiniZinc
-export BIGBAD="118.138.238.195"
+export BIGBAD="compute.optimisation-2020.cloud.edu.au"

@@ -41,9 +41,6 @@ setopt share_history          # share command history data
 # Case insensitive autocompletion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-# MiniZinc
-export BIGBAD="118.138.238.195"
-
 # Start Starship Prompt
 if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"
