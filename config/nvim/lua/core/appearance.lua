@@ -1,15 +1,19 @@
 --Make line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
+
+-- Enable break indent
+vim.o.breakindent = true
 
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
-vim.g.onedark_terminal_italics = 2
-vim.cmd[[colorscheme onedark]]
+require('nord').set()
 
 --Set statusbar
-vim.g.lightline = { colorscheme = 'onedark';
-      active = { left = { { 'mode', 'paste' }, { 'gitbranch', 'readonly', 'filename', 'modified' } } };
-      component_function = { gitbranch = 'fugitive#head', };
+require('lualine').setup {
+  options = {
+    theme = 'nord'
+  }
 }
 
 --Map blankline

@@ -16,23 +16,35 @@ require('packer').startup(function()
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use { 'lukas-reineke/indent-blankline.nvim', branch="lua" } -- Add indentation guides even on blank lines
   -- UI
-  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } -- Popup selection
-  use 'joshdick/onedark.vim' -- Theme
-  use 'itchyny/lightline.vim' -- Statusline
-  -- LSP integration
+  use { -- Popup selection
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
+  -- Appearance
+  use 'shaunsingh/nord.nvim' -- Theme
+  use { -- Status line
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+  -- Language Support
   use 'neovim/nvim-lspconfig' -- Configuration of LSP
   use 'hrsh7th/nvim-compe' -- Autocompletion plugin
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree Sitter configuration
 end)
 
 --- Core Functionality ---
+require "core.appearance"
+require "core.editor"
+require "core.mappings"
 require "core.options"
 require "core.search"
-require "core.appearance"
 
 --- Language Support ---
 require "lang.lsp"
 require "lang.completion"
+require "lang.treesitter"
 
 require "lang.c++"
 require "lang.python"
 require "lang.rust"
+require "lang.zinc"
