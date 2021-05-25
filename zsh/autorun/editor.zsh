@@ -8,6 +8,7 @@ if command -v nvim &> /dev/null; then
 fi
 
 # Emacs
-export EDITOR="emacsclient -nw"
-alias edit="emacsclient -nw"
 [ -d "$HOME/.emacs.d/bin" ] && export PATH=$PATH:"$HOME/.emacs.d/bin"
+
+export EDITOR="vi"
+alias edit="${EDITOR}"
