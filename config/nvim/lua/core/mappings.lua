@@ -4,8 +4,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Remap for dealing with word wrap
-vim.api.nvim_set_keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap=true, expr = true, silent = true})
-vim.api.nvim_set_keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", {noremap= true, expr = true, silent = true})
+vim.api.nvim_set_keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap=true, expr = true, silent = true })
+vim.api.nvim_set_keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap= true, expr = true, silent = true })
 
 -- Buffers
  -- Switch to previous buffer
@@ -19,6 +19,11 @@ vim.api.nvim_set_keymap('n', '<leader>bm', [[<cmd>%bd\|e#<cr>]], { noremap = tru
  -- Copy current buffer
 vim.api.nvim_set_keymap('n', '<leader>by', [[ggyG<C-o>]], { noremap = true })
 
+-- Editing
+	-- Wrap current paragraph
+vim.api.nvim_set_keymap('n', '<M-q>', [[gqip]], { noremap = true })
+
+
 -- Files
   -- Open file
 vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, silent = true})
@@ -26,6 +31,10 @@ vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>fs', [[<cmd>write<cr>]], { noremap = true })
   -- Save all open files
 vim.api.nvim_set_keymap('n', '<leader>fs', [[<cmd>wa<cr>]], { noremap = true })
+
+-- Project
+	-- Open file in project (pwd)
+vim.api.nvim_set_keymap('n', '<leader>pf', [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, silent = true})
 
 -- Search
   -- Search in current project
@@ -37,3 +46,5 @@ vim.api.nvim_set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin
 
 -- Windows
 vim.api.nvim_set_keymap('n', '<leader>w', [[<C-w>]], { noremap = true })
+  -- Quit all vim windows
+vim.api.nvim_set_keymap('n', '<leader>qq', [[<cmd>qa<cr>]], { noremap = true })
