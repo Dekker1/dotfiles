@@ -14,7 +14,6 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   -- General Editing
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
-  use { 'lukas-reineke/indent-blankline.nvim', branch="lua" } -- Add indentation guides even on blank lines
   -- UI
   use { -- Popup selection
     'nvim-telescope/telescope.nvim',
@@ -26,6 +25,7 @@ require('packer').startup(function()
     'hoob3rt/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
+  use { 'lukas-reineke/indent-blankline.nvim', branch="lua" } -- Add indentation guides even on blank lines
   -- Language Support
   use 'neovim/nvim-lspconfig' -- Configuration of LSP
   use 'hrsh7th/nvim-compe' -- Autocompletion plugin

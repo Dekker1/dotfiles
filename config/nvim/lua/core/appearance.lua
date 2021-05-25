@@ -17,7 +17,7 @@ require('lualine').setup {
 }
 
 --Map blankline
-vim.g.indent_blankline_char = "┊"
+vim.g.indent_blankline_char = "│" -- ┊ is another good option
 vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
 vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile'}
 vim.g.indent_blankline_char_highlight = 'LineNr'
