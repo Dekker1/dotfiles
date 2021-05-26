@@ -44,3 +44,7 @@ vim.api.nvim_exec([[
     au TermOpen * set nonu
   augroup end
 ]], false)
+
+-- Enabe spellcheck
+vim.wo.spell = true
+vim.o.spelllang = "en_au,nl"
