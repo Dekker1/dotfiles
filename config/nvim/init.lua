@@ -20,6 +20,7 @@ require('packer').startup(function()
 		'nvim-telescope/telescope.nvim',
 		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	}
+	use 'folke/which-key.nvim'
 	-- Appearance
 	use 'folke/tokyonight.nvim' -- Theme
 	use 'hoob3rt/lualine.nvim' -- Status line
