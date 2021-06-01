@@ -1,12 +1,14 @@
 --Make line numbers default
-vim.wo.number = true
-vim.wo.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
--- Enable break indent
-vim.o.breakindent = true
+-- Softwrap settings
+vim.opt.breakindent = true
+vim.opt.showbreak = "↪  "
+vim.opt.linebreak = true
 
 --Set colorscheme (order is important here)
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 require('nord').set()
 
 --Set statusbar

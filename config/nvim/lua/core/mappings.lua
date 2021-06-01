@@ -21,7 +21,7 @@ vim.api.nvim_set_keymap('n', '<leader>by', [[ggyG<C-o>]], { noremap = true })
 
 -- Editing
 	-- Wrap current paragraph
-vim.api.nvim_set_keymap('n', '<M-q>', [[gqip]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<M-q>', [[gwip]], { noremap = false })
 
 
 -- Files

@@ -11,14 +11,15 @@ end
 local use = require('packer').use
 require('packer').startup(function()
   -- Package manager (Self update)
-  use 'wbthomason/packer.nvim'
+	use 'wbthomason/packer.nvim'
   -- General Editing
-  use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
+	use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
+	use 'Konfekt/vim-sentence-chopper' -- "gw" to split using sentences
   -- UI
-  use { -- Popup selection
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
-  }
+	use { -- Popup selection
+		'nvim-telescope/telescope.nvim',
+		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+	}
   -- Appearance
   use 'shaunsingh/nord.nvim' -- Theme
   use { -- Status line
@@ -29,7 +30,7 @@ require('packer').startup(function()
   -- Language Support
   use 'neovim/nvim-lspconfig' -- Configuration of LSP
   use 'hrsh7th/nvim-compe' -- Autocompletion plugin
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree Sitter configuration
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree Sitter configuration
 end)
 
 --- Core Functionality ---

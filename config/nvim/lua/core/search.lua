@@ -1,10 +1,10 @@
 --Set highlight on search
-vim.o.hlsearch = false
-vim.o.incsearch = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
 --Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Telescope
 require('telescope').setup {

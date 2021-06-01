@@ -1,5 +1,5 @@
 -- Set completeopt to have a better completion experience
-vim.o.completeopt="menuone,noinsert"
+vim.opt.completeopt="menuone,noinsert"
 
 -- Compe setup
 require'compe'.setup {

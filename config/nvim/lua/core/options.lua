@@ -1,28 +1,28 @@
 -- Incremental live completion
-vim.o.inccommand = "nosplit"
+vim.opt.inccommand = "nosplit"
 
 -- Do not save when switching buffers
-vim.o.hidden = true
+vim.opt.hidden = true
 
 -- Enable mouse mode
-vim.o.mouse = "a"
+vim.opt.mouse = "a"
 
 -- Use system clipboard
-vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- Toggle to disable mouse mode and indentlines for easier paste
 ToggleMouse = function()
-  if vim.o.mouse == 'a' then
+  if vim.opt.mouse == 'a' then
     vim.cmd[[IndentBlanklineDisable]]
-    vim.wo.signcolumn='no'
-    vim.o.mouse = 'v'
-    vim.wo.number = false
+    vim.opt.signcolumn='no'
+    vim.opt.mouse = 'v'
+    vim.opt.number = false
     print("Mouse disabled")
   else
     vim.cmd[[IndentBlanklineEnable]]
-    vim.wo.signcolumn='yes'
-    vim.o.mouse = 'a'
-    vim.wo.number = true
+    vim.opt.signcolumn='yes'
+    vim.opt.mouse = 'a'
+    vim.opt.number = true
     print("Mouse enabled")
   end
 end
@@ -33,8 +33,8 @@ vim.api.nvim_set_keymap('n', '<F10>', '<cmd>lua ToggleMouse()<cr>', { noremap = 
 vim.cmd[[set undofile]]
 
 -- Decrease update time
-vim.o.updatetime = 250
-vim.wo.signcolumn="yes"
+vim.opt.updatetime = 250
+vim.opt.signcolumn="yes"
 
 -- Remap escape to leave terminal mode
 vim.api.nvim_exec([[
@@ -45,6 +45,9 @@ vim.api.nvim_exec([[
   augroup end
 ]], false)
 
--- Enabe spellcheck
-vim.wo.spell = true
-vim.o.spelllang = "en_au,nl"
+-- Enable spellcheck
+vim.opt.spell = true
+vim.opt.spelllang = "en_au,nl"
+
+-- "gw" does not use latexindent
+vim.g.latexindent = false
