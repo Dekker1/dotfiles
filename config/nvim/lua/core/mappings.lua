@@ -25,11 +25,11 @@ vim.api.nvim_set_keymap('n', '<M-q>', [[gwip]], { noremap = false })
 
 
 -- Files
-  -- Open file
+	-- Open file
 vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, silent = true})
-  -- Save curent file
+	-- Save curent file
 vim.api.nvim_set_keymap('n', '<leader>fs', [[<cmd>write<cr>]], { noremap = true })
-  -- Save all open files
+	-- Save all open files
 vim.api.nvim_set_keymap('n', '<leader>fs', [[<cmd>wa<cr>]], { noremap = true })
 
 -- Project
@@ -37,14 +37,14 @@ vim.api.nvim_set_keymap('n', '<leader>fs', [[<cmd>wa<cr>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>pf', [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, silent = true})
 
 -- Search
-  -- Search in current project
+	-- Search in current project
 vim.api.nvim_set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], { noremap = true, silent = true})
-  -- Search word under cursor in current project
+	-- Search word under cursor in current project
 vim.api.nvim_set_keymap('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]], { noremap = true, silent = true})
-  -- Search symbols in current buffer
+	-- Search symbols in current buffer
 vim.api.nvim_set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], { noremap = true, silent = true})
 
 -- Windows
 vim.api.nvim_set_keymap('n', '<leader>w', [[<C-w>]], { noremap = true })
-  -- Quit all vim windows
+	-- Quit all vim windows
 vim.api.nvim_set_keymap('n', '<leader>qq', [[<cmd>qa<cr>]], { noremap = true })

@@ -14,10 +14,10 @@ vim.cmd[[colorscheme tokyonight]]
 
 --Set statusbar
 require('lualine').setup {
-  options = {
+	options = {
 		icons_enabled = 0, -- displays icons in alongside component
-    theme = 'tokyonight'
-  }
+		theme = 'tokyonight'
+	}
 }
 
 --Map blankline
@@ -31,8 +31,8 @@ vim.g.splitbelow = true
 
 -- Highlight on yank
 vim.api.nvim_exec([[
-  augroup YankHighlight
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
-  augroup end
+	augroup YankHighlight
+		autocmd!
+		autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+	augroup end
 ]], false)
