@@ -31,6 +31,10 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Configuration of LSP
   use 'hrsh7th/nvim-compe' -- Autocompletion plugin
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree Sitter configuration
+	-- TODO:  use 'L3MON4D3/LuaSnip' -- Snippets
+	use 'hrsh7th/vim-vsnip' -- Snippets
+	use 'hrsh7th/vim-vsnip-integ'
+	use 'rafamadriz/friendly-snippets' -- Snippet Definitions
 end)
 
 --- Core Functionality ---
