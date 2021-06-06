@@ -9,12 +9,14 @@ vim.opt.linebreak = true
 
 --Set colorscheme (order is important here)
 vim.opt.termguicolors = true
-require('nord').set()
+vim.opt.background = "dark"
+vim.cmd[[colorscheme tokyonight]]
 
 --Set statusbar
 require('lualine').setup {
   options = {
-    theme = 'nord'
+		icons_enabled = 0, -- displays icons in alongside component
+    theme = 'tokyonight'
   }
 }
 
