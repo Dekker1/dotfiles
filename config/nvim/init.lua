@@ -26,6 +26,7 @@ require('packer').startup(function()
 	use 'hoob3rt/lualine.nvim' -- Status line
 	use { 'lukas-reineke/indent-blankline.nvim', branch="lua" } -- Add indentation guides even on blank lines
 	-- Language Support
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'neovim/nvim-lspconfig' -- Configuration of LSP
 	use 'hrsh7th/nvim-compe' -- Autocompletion plugin
 	-- TODO:  use 'L3MON4D3/LuaSnip' -- Snippets
