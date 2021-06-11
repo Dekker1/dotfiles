@@ -20,6 +20,8 @@
 	helper = GIT_CREDENTIAL_HELPER
 [help]
 	autocorrect = 1
+[init]
+	defaultBranch = develop
 [push]
 	default = simple
 [pull]
