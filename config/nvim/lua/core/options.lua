@@ -8,7 +8,7 @@ vim.opt.hidden = true
 vim.opt.mouse = "a"
 
 -- Use system clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:prepend {"unnamedplus"}
 
 -- Toggle to disable mouse mode and indentlines for easier paste
 ToggleMouse = function()
