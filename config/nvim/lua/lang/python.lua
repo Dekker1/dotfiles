@@ -1,7 +1,7 @@
 local lsp_settings = require('lang.lsp')
 local nvim_lsp = require('lspconfig')
 
-nvim_lsp['pyright'].setup {
+nvim_lsp.pyls.setup {
 	on_attach = lsp_settings.on_attach,
 	capabilities = lsp_settings.capabilites,
 }
