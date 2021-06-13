@@ -23,6 +23,12 @@ end
 
 -- Map :Format to vim.lsp.buf.formatting()
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
+vim.cmd([[
+	augroup format
+		autocmd!
+		autocmd BufWritePre * :Format
+	augroup END
+]])
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
