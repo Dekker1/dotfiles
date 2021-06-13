@@ -31,7 +31,7 @@ local mappings = {
 	-- File
 	f = {
 		name = "File",
-		f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find File" },
+		f = { "<cmd>lua require('telescope.builtin').file_browser()<cr>", "Find File" },
 		s = { "<cmd>write<cr>", "Store File" },
 		S = { "<cmd>wa<cr>", "Store All Files" },
 	},
@@ -39,7 +39,6 @@ local mappings = {
 	s = {
 		name = "Search",
 		p = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search Project" },
-		d = { "<cmd>lua require('telescope.builtin').grep_string()<cr>", "Search Cursor" },
 		b = { "<cmd>lua require('telescope.builtin').treesitter()<cr>", "Search Buffer Symbols" },
 	},
 	-- Project
