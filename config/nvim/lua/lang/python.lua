@@ -1,4 +1,4 @@
-local lsp_settings = require('lang.lsp')
+local lsp_settings = require('comp.lsp')
 local nvim_lsp = require('lspconfig')
 
 nvim_lsp.pyls.setup {
