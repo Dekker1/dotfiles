@@ -12,6 +12,7 @@ require('packer').startup(function()
 	-- General Editing
 	use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
 	use 'Konfekt/vim-sentence-chopper' -- "gw" to split using sentences
+	use 'beauwilliams/focus.nvim' -- Automatically resize based on focused window
 	-- Appearance
 	use 'folke/tokyonight.nvim' -- Theme
 	use 'hoob3rt/lualine.nvim' -- Status line
