@@ -10,7 +10,7 @@ require('packer').startup(function()
 	-- Package manager (Self update)
 	use 'wbthomason/packer.nvim'
 	-- General Editing
-	use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
+	use 'b3nj5m1n/kommentary' -- "gc" to comment visual regions/lines
 	use 'Konfekt/vim-sentence-chopper' -- "gw" to split using sentences
 	use 'beauwilliams/focus.nvim' -- Automatically resize based on focused window
 	-- Appearance
