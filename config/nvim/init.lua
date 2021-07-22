@@ -15,6 +15,8 @@ require('packer').startup(function()
 	use 'beauwilliams/focus.nvim' -- Automatically resize based on focused window
 	-- Appearance
 	use 'folke/tokyonight.nvim' -- Theme
+	use 'NLKNguyen/papercolor-theme' -- Light Theme
+  use 'cormacrelf/dark-notify' -- Automatic darkmode
 	use 'hoob3rt/lualine.nvim' -- Status line
 	use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
 	use 'folke/which-key.nvim' -- Show key mappings

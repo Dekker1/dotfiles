@@ -7,19 +7,6 @@ vim.opt.breakindent = true
 vim.opt.showbreak = "↪  "
 vim.opt.linebreak = true
 
---Set colorscheme (order is important here)
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
-vim.cmd[[colorscheme tokyonight]]
-
---Set statusbar
-require('lualine').setup {
-	options = {
-		icons_enabled = 0, -- displays icons in alongside component
-		theme = 'tokyonight'
-	}
-}
-
 --Map blankline
 vim.g.indent_blankline_char = "│" -- ┊ is another good option
 vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
@@ -36,3 +23,38 @@ vim.api.nvim_exec([[
 		autocmd TextYankPost * silent! lua vim.highlight.on_yank()
 	augroup end
 ]], false)
+
+-- Colour Scheme configuration
+local dn = require('dark_notify')
+dn.run({
+	schemes = {
+		dark  = {
+			colorscheme = "tokyonight",
+			background = "dark",
+		},
+		light = {
+			colorscheme = "papercolor",
+			background = "light",
+		}
+	},
+	onchange = function(mode)
+		--Set statusbar
+		if mode == "dark" then
+			require("plenary.reload").reload_module("lualine", true)
+			require('lualine').setup {
+				options = {
+					icons_enabled = 0,
+					theme = 'tokyonight'
+				}
+			}
+		else
+			require("plenary.reload").reload_module("lualine", true)
+			require('lualine').setup {
+				options = {
+					icons_enabled = 0,
+					theme = 'papercolor'
+				}
+			}
+		end
+	end,
+})
