@@ -19,9 +19,3 @@ fi
 if command -v fd &> /dev/null; then
   export FZF_DEFAULT_COMMAND='fd --type f'
 fi
-
-# z (autojump)
-if command -v pazi &>/dev/null; then
-  eval "$(pazi init zsh)"
-  alias zf='z --pipe="fzf"'
-fi
