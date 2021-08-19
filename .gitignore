@@ -1,4 +1,6 @@
 .gitconfig
 git/gitconfig
 vscode/backup/*
+config/nvim/plugin/packer_compiled.lua
+*.bak
 **/log.txt

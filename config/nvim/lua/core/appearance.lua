@@ -27,32 +27,24 @@ vim.api.nvim_exec([[
 -- Colour Scheme configuration
 local dn = require('dark_notify')
 dn.run({
-	schemes = {
-		dark  = {
-			colorscheme = "tokyonight",
-			background = "dark",
-		},
-		light = {
-			colorscheme = "papercolor",
-			background = "light",
-		}
-	},
 	onchange = function(mode)
 		--Set statusbar
 		if mode == "dark" then
+			require('github-theme').setup({themeStyle = "dark"})
 			require("plenary.reload").reload_module("lualine", true)
 			require('lualine').setup {
 				options = {
 					icons_enabled = 0,
-					theme = 'tokyonight'
+					theme = 'github'
 				}
 			}
 		else
+			require('github-theme').setup({themeStyle = "light"})
 			require("plenary.reload").reload_module("lualine", true)
 			require('lualine').setup {
 				options = {
 					icons_enabled = 0,
-					theme = 'papercolor'
+					theme = 'github'
 				}
 			}
 		end

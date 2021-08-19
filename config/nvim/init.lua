@@ -14,8 +14,7 @@ require('packer').startup(function()
 	use 'Konfekt/vim-sentence-chopper' -- "gw" to split using sentences
 	use 'beauwilliams/focus.nvim' -- Automatically resize based on focused window
 	-- Appearance
-	use 'folke/tokyonight.nvim' -- Theme
-	use 'NLKNguyen/papercolor-theme' -- Light Theme
+	use 'projekt0n/github-nvim-theme' -- Theme
   use 'cormacrelf/dark-notify' -- Automatic darkmode
 	use 'hoob3rt/lualine.nvim' -- Status line
 	use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
