@@ -1,0 +1,2 @@
+# Use simple ansi theme for bat
+--theme="ansi"
