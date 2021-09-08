@@ -1,0 +1,23 @@
+[alias]
+	co = checkout
+	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	prune = fetch --prune
+	stash-all = stash save --include-untracked
+	s = status
+	undo = reset --soft HEAD^
+[commit]
+	gpgSign = true
+[credential]
+	helper = osxkeychain
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[user]
+	name = Jip J. Dekker
+	email = jip@dekker.one
+	signingkey = 517DF4A00618C9C3
+[pull]
+	ff = only
+[init]
+	defaultBranch = develop

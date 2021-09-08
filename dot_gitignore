@@ -1,0 +1,10 @@
+.DS_Store
+.svn
+*~
+*.swp
+*.rbc
+.idea/
+__pycache__/
+.vscode
+.clangd/
+compile_commands.json
