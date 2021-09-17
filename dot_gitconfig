@@ -7,6 +7,8 @@
 	undo = reset --soft HEAD^
 [commit]
 	gpgSign = true
+[core]
+	excludesfile = /Users/dekker1/.gitignore
 [credential]
 	helper = osxkeychain
 [help]
