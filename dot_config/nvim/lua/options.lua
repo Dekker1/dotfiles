@@ -94,4 +94,4 @@ vim.cmd([[
 	augroup END
 ]])
 
-vim.cmd([[ autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path % ]])
+vim.cmd([[ autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%" ]])

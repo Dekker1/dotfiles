@@ -1,0 +1,44 @@
+completion_type = "list"
+prompt = "starship prompt"
+rm_always_trash = true
+table_mode = "rounded"
+
+path = [
+	"/Applications/kitty.app/Contents/MacOS",
+	"/opt/homebrew/bin",
+	"/usr/bin",
+	"/bin",
+	"/usr/sbin",
+	"/sbin"
+]
+
+startup = [
+	"alias edit = ^($nu.env.EDITOR)",
+	"alias set-light-theme = kitty +kitten themes Rose-pine-dawn",
+	"alias set-dark-theme = kitty +kitten themes Rose-pine-moon",
+
+	# Optional binaries from Homebrew
+	"pathvar add $'(brew --prefix | str trim)/opt/bison/bin'",
+	"pathvar add $'(brew --prefix | str trim)/opt/flex/bin'",
+	"pathvar add $'(brew --prefix | str trim)/opt/llvm/bin'",
+	"pathvar add $'(brew --prefix | str trim)/opt/openjdk/bin'",
+
+	"pathvar append ~/.local/bin", # pipx binaries
+	"pathvar append ~/.cargo/bin", # cargo binaries
+
+	"let-env MZN_SOLVER_PATH = $'(brew --prefix | str trim)/share/minizinc/solvers'",
+
+  # Zoxide autojump
+	"zoxide init nushell --hook prompt | save ~/.config/nu/zoxide.nu", "source ~/.config/nu/zoxide.nu",
+]
+
+[line_editor]
+completion_match_method = "case-insensitive"
+edit_mode = "vi"
+
+[env]
+BIGBAD = "compute.optimisation-2020.cloud.edu.au"
+CMAKE_EXPORT_COMPILE_COMMANDS = "1"
+CMAKE_GENERATOR = "Ninja Multi-Config"
+EDITOR = "nvim"
+FZF_DEFAULT_COMMAND = "fd --type f"
