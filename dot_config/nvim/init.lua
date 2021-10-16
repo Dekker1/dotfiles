@@ -10,14 +10,18 @@ require('packer').startup(function()
 	-- Package manager (Self update)
 	use 'wbthomason/packer.nvim'
 	-- General Editing
-	use 'b3nj5m1n/kommentary' -- 'gc' to comment visual regions/lines
+	use {
+		'numToStr/Comment.nvim', -- 'gc' to comment visual regions/lines
+		config = function()
+			require('Comment').setup()
+		end
+	}
 	use {
 		'Konfekt/vim-sentence-chopper', -- 'gw' to split using sentences
 		config = function() vim.g.latexindent = false end, -- "gw" should not use latexindent
 	}
-	use 'beauwilliams/focus.nvim' -- Automatically resize based on focused window
 	-- Appearance
-  use {
+	use {
 		'cormacrelf/dark-notify', -- Automatic theme switching 
 		requires = {
 			'hoob3rt/lualine.nvim', -- Status line
@@ -33,7 +37,11 @@ require('packer').startup(function()
 		'folke/which-key.nvim', -- Show key mappings
 		config = function() require('plugins.keymap') end,
 	}
--- 	-- Language configuration
+	use {
+		"beauwilliams/focus.nvim",
+		config = function() require("focus").setup() end,
+	}
+	-- Language configuration
 	use {
 		'neovim/nvim-lspconfig', -- Configuration of LSP
 		requires = {
@@ -49,9 +57,14 @@ require('packer').startup(function()
 			require('lang.python')
 			require('lang.rust')
 			require('lang.tex')
+			require('lang.yaml')
 			require('lang.zinc')
 		end,
 	} 
+	use {
+		'pianocomposer321/yabs.nvim', -- Build System
+		config = require('lang.build').conf_yabs,
+	}
 	-- Auto-completion
 	use {
 		'hrsh7th/nvim-cmp',

@@ -43,6 +43,8 @@ local mappings = {
 	-- Project
 	p = {
 		f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Search Project" },
+		b = { "<cmd>lua require('yabs'):run_default_task()<cr>", "Build Project" },
+		t = { "<cmd>lua require('telescope').extensions.yabs.tasks()<cr>", "Search Project" },
 	},
 
 	-- Window
