@@ -4,12 +4,19 @@ rm_always_trash = true
 table_mode = "rounded"
 
 path = [
-	"/Applications/kitty.app/Contents/MacOS",
-	"/opt/homebrew/bin",
+	"/usr/local/bin",
 	"/usr/bin",
 	"/bin",
 	"/usr/sbin",
-	"/sbin"
+	"/sbin",
+# From MacOS helper (/usr/libexec/path_helper)
+	"/Library/TeX/texbin",
+	"/Library/Apple/usr/bin",
+# Terminal emulator
+	"/Applications/kitty.app/Contents/MacOS",
+# Homebrew binary directories
+	"/opt/homebrew/bin",
+	"/opt/homebrew/sbin",
 ]
 
 startup = [
@@ -37,8 +44,20 @@ completion_match_method = "case-insensitive"
 edit_mode = "vi"
 
 [env]
-BIGBAD = "compute.optimisation-2020.cloud.edu.au"
-CMAKE_EXPORT_COMPILE_COMMANDS = "1"
-CMAKE_GENERATOR = "Ninja Multi-Config"
+# Set default editor
 EDITOR = "nvim"
+# Alias for Monash compute cluster
+BIGBAD = "compute.optimisation-2020.cloud.edu.au"
+# CMake settings
+CMAKE_EXPORT_COMPILE_COMMANDS = "1" # output compile-commands.json for clangd
+CMAKE_GENERATOR = "Ninja Multi-Config" # use Ninja generator by default
+# Default find command for FZF
 FZF_DEFAULT_COMMAND = "fd --type f"
+# Homebrew shell setup (brew shellenv)
+HOMEBREW_PREFIX = "/opt/homebrew"
+HOMEBREW_CELLAR = "/opt/homebrew/Cellar"
+HOMEBREW_REPOSITORY = "/opt/homebrew"
+HOMEBREW_SHELLENV_PREFIX = "/opt/homebrew"
+INFOPATH = "/opt/homebrew/share/info"
+# Set MANPATH
+MANPATH = "/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/opt/homebrew/share/man"
