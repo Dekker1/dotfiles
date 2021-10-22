@@ -23,6 +23,9 @@ startup = [
 	"alias edit = ^($nu.env.EDITOR)",
 	"alias set-light-theme = kitty +kitten themes Rose-pine-dawn",
 	"alias set-dark-theme = kitty +kitten themes Rose-pine-moon",
+	"alias brew-backup = brew bundle dump --global --no-lock --cask --mas --tap --force",
+	"alias brew-cleanup = brew bundle cleanup --global --no-lock --force --zap",
+	"alias brew-restore = brew bundle install --global --no-lock",
 
 	# Optional binaries from Homebrew
 	"pathvar add $'(brew --prefix | str trim)/opt/bison/bin'",
