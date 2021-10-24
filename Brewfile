@@ -68,7 +68,6 @@ cask "protonvpn"
 cask "skim"
 cask "sublime-merge"
 cask "visual-studio-code"
-cask "whatsapp"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Adblock Plus", id: 1432731683
@@ -80,4 +79,5 @@ mas "Slack", id: 803453959
 mas "Textual IRC Client", id: 896450579
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
+mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
