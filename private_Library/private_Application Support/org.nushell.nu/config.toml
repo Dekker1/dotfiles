@@ -36,8 +36,6 @@ startup = [
 	"pathvar append ~/.local/bin", # pipx binaries
 	"pathvar append ~/.cargo/bin", # cargo binaries
 
-	"let-env MZN_SOLVER_PATH = $'(brew --prefix | str trim)/share/minizinc/solvers'",
-
   # Zoxide autojump
 	"zoxide init nushell --hook prompt | save ~/.config/nu/zoxide.nu", "source ~/.config/nu/zoxide.nu",
 ]
