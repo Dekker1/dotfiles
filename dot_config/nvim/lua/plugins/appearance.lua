@@ -9,9 +9,9 @@ local conf_theme = function()
 		onchange = function(mode)
 			--Set statusbar
 			if mode == "dark" then
-				require('rose-pine.functions').select_variant('moon')
+				require('rose-pine').set('moon')
 			else
-				require('rose-pine.functions').select_variant('dawn')
+				require('rose-pine').set('dawn')
 			end
 			require("plenary.reload").reload_module("lualine", true)
 			require('lualine').setup {
