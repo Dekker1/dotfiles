@@ -1,26 +1,13 @@
 -- YABS
 function conf_yabs()
-	local c_tasks = {
-		default_task = "build",
-		tasks = {
-			build = {
-				command = "cmake --build build --config Debug",
-				output = "quickfix",
-			},
-			build_rel = {
-				command = "cmake --build build --config Release",
-				output = "quickfix",
-			},
-			clean = {
-				command = "cmake --build build --target clean",
-				output = "quickfix",
-			},
-		}
-	}
 	require("yabs"):setup {
 		languages = {
-			cpp = c_tasks,
-			c = c_tasks,
+			cpp = {
+				default_task = require("yabs").first_available("cmake_build", "make_build"),
+			},
+			c = {
+				default_task = require("yabs").first_available("cmake_build", "make_build"),
+			},
 			rust =  {
 				default_task = "build",
 				tasks = {
@@ -40,11 +27,51 @@ function conf_yabs()
 						command = "cargo run",
 						output = "quickfix",
 					},
+					test = {
+						command = "cargo test",
+						output = "quickfix",
+					},
 				}
 			},
 		},
 		-- Default tasks
-		tasks = {},
+		tasks = {
+			cmake_build = {
+				command = "cmake --build build --config Debug",
+				condition = require("yabs.conditions").file_exists("CMakeLists.txt"),
+				output = "quickfix",
+			},
+			cmake_build_rel = {
+				command = "cmake --build build --config Release",
+				condition = require("yabs.conditions").file_exists("CMakeLists.txt"),
+				output = "quickfix",
+			},
+			cmake_clean = {
+				command = "cmake --build build --target clean",
+				condition = require("yabs.conditions").file_exists("CMakeLists.txt"),
+				output = "quickfix",
+			},
+			cmake_configure = {
+				command = "cmake -B build -S .",
+				condition = require("yabs.conditions").file_exists("CMakeLists.txt"),
+				output = "quickfix",
+			},
+			make_build = {
+				command = "make",
+				condition = require("yabs.conditions").file_exists("Makefile"),
+				output = "quickfix",
+			},
+			make_clean = {
+				command = "make clean",
+				condition = require("yabs.conditions").file_exists("Makefile"),
+				output = "quickfix",
+			},
+			make_test = {
+				command = "make test",
+				condition = require("yabs.conditions").file_exists("Makefile"),
+				output = "quickfix",
+			},
+		},
 		opts = {
 			output_types = {
 				quickfix = {
