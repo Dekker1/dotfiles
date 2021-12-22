@@ -24,7 +24,7 @@ require('packer').startup(function()
 	use {
 		'cormacrelf/dark-notify', -- Automatic theme switching 
 		requires = {
-			'hoob3rt/lualine.nvim', -- Status line
+			'nvim-lualine/lualine.nvim', -- Status line
 			'rose-pine/neovim', -- Theme
 		},
 		config = require('plugins.appearance').conf_theme,
