@@ -1,11 +1,14 @@
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
-
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-	vim.fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-	vim.api.nvim_command('packadd packer.nvim')
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-require('packer').startup(function()
+---- Set general neovim options ----
+require 'options'
+
+---- Load and configure plugins using Packer
+return require('packer').startup(function(use)
 	local use = require('packer').use
 	-- Package manager (Self update)
 	use 'wbthomason/packer.nvim'
@@ -86,7 +89,8 @@ require('packer').startup(function()
 		requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim', },
 		config = require('plugins.search').conf_telescope,
 	}
+	-- Setup Packer if just installed
+	if packer_bootstrap then
+		require('packer').sync()
+	end
 end)
-
----- Set general neovim options ----
-require 'options'
