@@ -25,10 +25,19 @@ return require('packer').startup(function(use)
 	}
 	-- Appearance
 	use {
+		'SmiteshP/nvim-gps', -- Status line
+		requires = 'nvim-treesitter/nvim-treesitter',
+		config = function() require("nvim-gps").setup({ disable_icons = true }) end,
+	}
+	use {
+		'nvim-lualine/lualine.nvim', -- Status line
+		requires = 'SmiteshP/nvim-gps',
+	}
+	use {
 		'cormacrelf/dark-notify', -- Automatic theme switching 
 		requires = {
-			'nvim-lualine/lualine.nvim', -- Status line
 			'rose-pine/neovim', -- Theme
+			'nvim-lualine/lualine.nvim',
 		},
 		config = require('plugins.appearance').conf_theme,
 	}
@@ -41,19 +50,18 @@ return require('packer').startup(function(use)
 		config = function() require('plugins.keymap') end,
 	}
 	use {
-		"beauwilliams/focus.nvim",
+		'beauwilliams/focus.nvim',
 		config = function() require("focus").setup() end,
 	}
 	-- Language configuration
 	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate',
+		config = require('plugins.appearance').conf_treesitter,
+	}
+	use {
 		'neovim/nvim-lspconfig', -- Configuration of LSP
-		requires = {
-			{
-				'nvim-treesitter/nvim-treesitter',
-				run = ':TSUpdate',
-				config = require('plugins.appearance').conf_treesitter,
-			},
-		},
+		requires = 'nvim-treesitter/nvim-treesitter',
 		config = function()
 			require('lang.c++')
 			require('lang.go')

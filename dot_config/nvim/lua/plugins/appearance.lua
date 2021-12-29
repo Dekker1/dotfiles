@@ -1,6 +1,7 @@
 -- Colour Scheme configuration
 local conf_theme = function()
 	local dn = require('dark_notify')
+	local gps = require("nvim-gps")
 	dn.run({
 		schemes = {
 			dark = "rose-pine",
@@ -18,6 +19,11 @@ local conf_theme = function()
 				options = {
 					icons_enabled = 0,
 					theme = 'rose-pine'
+				},
+				sections = {
+					lualine_c = {
+						{ gps.get_location, cond = gps.is_available },
+					},
 				}
 			}
 		end,
