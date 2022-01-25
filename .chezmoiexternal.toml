@@ -1,5 +1,0 @@
-[".config/kitty/themes"]
-type = "archive"
-url = "https://github.com/rose-pine/kitty/archive/refs/heads/main.tar.gz"
-exact = true
-stripComponents = 1
