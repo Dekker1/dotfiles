@@ -21,8 +21,8 @@ path = [
 
 startup = [
 	"alias edit = ^($nu.env.EDITOR)",
-	"alias set-light-theme = kitty +kitten themes Rose-pine-dawn",
-	"alias set-dark-theme = kitty +kitten themes Rose-pine-moon",
+	"alias set-light-theme = kitty +kitten themes Rosé Pine Dawn",
+	"alias set-dark-theme = kitty +kitten themes Rosé Pine Moon",
 	"alias brew-backup = brew bundle dump --global --no-lock --cask --mas --tap --force",
 	"alias brew-cleanup = brew bundle cleanup --global --no-lock --force --zap",
 	"alias brew-restore = brew bundle install --global --no-lock",
@@ -44,6 +44,8 @@ startup = [
 [line_editor]
 completion_match_method = "case-insensitive"
 edit_mode = "vi"
+max_history_size = 100000
+tab_stop = 2
 
 [env]
 # Set default editor
