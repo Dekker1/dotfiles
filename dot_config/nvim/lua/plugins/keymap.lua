@@ -21,11 +21,21 @@ local mappings = {
 	["<tab>"] = { "<C-^>", "Reopen Last Buffer" },
 	-- Buffer
 	b = {
-		name = "buffer",
+		name = "Buffer",
 		b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Find Buffer" },
 		d = { "<cmd>bd<cr>", "Delete Buffer" },
 		m = { "<cmd>%bd|e#<cr>", "Delete Other Buffers" },
 		y = { "ggyG<C-o>", "Copy Buffer" },
+	},
+	-- Debug
+	d = {
+		name = "Debug",
+		b = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Breakpoint"},
+		B = {"<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", "Conditional Breakpoint"},
+		l = {"<cmd>require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", "Logpoint"},
+		r = {"<cmd>lua require('dap').repl.open()<cr>", "Open REPL"},
+		c = {"<cmd>lua require('dap').continue()<cr>", "Continue"},
+		q = {"<cmd>lua require('dap').close()<cr>", "Close"},
 	},
 	-- File
 	f = {

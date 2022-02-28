@@ -22,6 +22,7 @@ local conf_theme = function()
 				},
 				sections = {
 					lualine_c = {
+						'filename',
 						{ gps.get_location, cond = gps.is_available },
 					},
 				}

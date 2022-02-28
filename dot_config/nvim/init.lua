@@ -27,7 +27,10 @@ return require('packer').startup(function(use)
 	use {
 		'SmiteshP/nvim-gps', -- Status line
 		requires = 'nvim-treesitter/nvim-treesitter',
-		config = function() require("nvim-gps").setup({ disable_icons = true }) end,
+		config = function() require("nvim-gps").setup({
+			disable_icons = true,
+			depth = 3,
+		}) end,
 	}
 	use {
 		'nvim-lualine/lualine.nvim', -- Status line
@@ -73,6 +76,10 @@ return require('packer').startup(function(use)
 		end,
 	} 
 	use {
+		'mfussenegger/nvim-dap',
+		config = require('lang.debug').conf_debug,
+	}
+	use {
 		'pianocomposer321/yabs.nvim', -- Build System
 		config = require('lang.build').conf_yabs,
 	}
@@ -85,8 +92,9 @@ return require('packer').startup(function(use)
 			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-nvim-lua',
-			'hrsh7th/vim-vsnip',
+			'hrsh7th/cmp-vsnip',
 			-- Further Requirements
+			'hrsh7th/vim-vsnip',
 			'nvim-lua/plenary.nvim'
 		},
 		config = require('plugins.completion').conf_cmp,

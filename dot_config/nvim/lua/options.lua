@@ -82,6 +82,12 @@ vim.opt.tabstop = 2
 vim.opt.smartindent = true
 vim.opt.expandtab = false
 
+-- Code Folding
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldminlines = 5
+vim.opt.foldnestmax = 2
+
 -- Save when lost focus
 vim.cmd('au FocusLost * silent! wa')
 
