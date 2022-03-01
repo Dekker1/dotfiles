@@ -1,20 +1,18 @@
 -- Colour Scheme configuration
 local conf_theme = function()
 	local dn = require('dark_notify')
-	local gps = require("nvim-gps")
+	local gps = require('nvim-gps')
+	require('rose-pine').setup({
+		dark_variant = 'moon',
+	})
 	dn.run({
 		schemes = {
-			dark = "rose-pine",
-			light = "rose-pine",
+			dark = 'rose-pine',
+			light = 'rose-pine',
 		},
 		onchange = function(mode)
 			--Set statusbar
-			if mode == "dark" then
-				require('rose-pine').set('moon')
-			else
-				require('rose-pine').set('dawn')
-			end
-			require("plenary.reload").reload_module("lualine", true)
+			require('plenary.reload').reload_module('lualine', true)
 			require('lualine').setup {
 				options = {
 					icons_enabled = 0,
@@ -40,7 +38,7 @@ end
 
 local conf_treesitter = function()
 	require'nvim-treesitter.configs'.setup {
-		ensure_installed = "maintained",
+		ensure_installed = 'maintained',
 		highlight = {
 			enable = true, -- false will disable the whole extension
 		},
