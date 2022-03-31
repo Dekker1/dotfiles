@@ -2,9 +2,10 @@ local treesitter = require('nvim-treesitter.parsers')
 local parser_config = treesitter.get_parser_configs()
 parser_config.minizinc = {
 	install_info = {
-		url = "https://github.com/Dekker1/tree-sitter-minizinc",
+		url = "https://github.com/shackle-rs/shackle",
 		branch = "develop",
-		files = {"src/parser.c"}
+		files = {"src/parser.c"},
+		location = "misc/tree-sitter-minizinc",
 	},
 	filetype = "zinc",
 	used_by = {"mzn", "fzn", "dzn"}
