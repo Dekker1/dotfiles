@@ -108,6 +108,11 @@ module completions {
 use completions *
 
 ### Manage PATH
+# From MacOS helper (/usr/libexec/path_helper)
+let-env PATH = ($env.PATH | append "/Library/TeX/texbin")
+let-env PATH = ($env.PATH | append "/Library/Apple/usr/bin")
+let-env PATH = ($env.PATH | append "/opt/homebrew/bin")
+let-env PATH = ($env.PATH | append "/opt/homebrew/sbin")
 # Optional Homebrew packages
 let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/bison/bin')
 let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/flex/bin')
@@ -116,9 +121,6 @@ let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/openjdk/bin
 # Other package managers
 let-env PATH = ($env.PATH | prepend "~/.local/bin")
 let-env PATH = ($env.PATH | prepend "~/.cargo/bin")
-# From MacOS helper (/usr/libexec/path_helper)
-let-env PATH = ($env.PATH | append "/Library/TeX/texbin")
-let-env PATH = ($env.PATH | append "/Library/Apple/usr/bin")
 
 ### Setup aliases
 alias edit = ^($env.EDITOR)
