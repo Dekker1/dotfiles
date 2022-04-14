@@ -1,39 +1,5 @@
 # Nushell Config File
 
-let $config = ($config | upsert rm_always_trash true)
-let $config = ($config | upsert edit_mode vi)
-let $config = ($config | upsert max_history_size 100000)
-let $config = ($config | upsert footer_mode auto)
-
-# Specifies how environment variables are:
-# - converted from a string to a value on Nushell startup (from_string)
-# - converted from a value back to a string when running external commands (to_string)
-# Note: The conversions happen *after* config.nu is loaded
-let-env ENV_CONVERSIONS = {
-  "PATH": {
-    from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | str collect (char esep) }
-  }
-  "Path": {
-    from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | str collect (char esep) }
-  }
-}
-
-# Directories to search for scripts when calling source or use
-#
-# By default, <nushell-config-dir>/scripts is added
-let-env NU_LIB_DIRS = [
-    ($nu.config-path | path dirname | path join 'scripts')
-]
-
-# Directories to search for plugin binaries when calling register
-#
-# By default, <nushell-config-dir>/plugins is added
-let-env NU_PLUGIN_DIRS = [
-    ($nu.config-path | path dirname | path join 'plugins')
-]
-
 module completions {
   # Custom completions for external commands (those outside of Nushell)
   # Each completions has two parts: the form of the external command, including its flags and parameters
@@ -41,7 +7,7 @@ module completions {
   #
   # This is a simplified version of completions for git branches and git remotes
   def "nu-complete git branches" [] {
-    ^git branch | lines | each { |line| $line | str find-replace '\* ' '' | str trim }
+    ^git branch | lines | each { |line| $line | str replace '[\*\+] ' '' | str trim }
   }
 
   def "nu-complete git remotes" [] {
@@ -107,20 +73,12 @@ module completions {
 # Get just the extern definitions without the custom completion commands
 use completions *
 
-### Manage PATH
-# From MacOS helper (/usr/libexec/path_helper)
-let-env PATH = ($env.PATH | append "/Library/TeX/texbin")
-let-env PATH = ($env.PATH | append "/Library/Apple/usr/bin")
-let-env PATH = ($env.PATH | append "/opt/homebrew/bin")
-let-env PATH = ($env.PATH | append "/opt/homebrew/sbin")
-# Optional Homebrew packages
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/bison/bin')
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/flex/bin')
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/llvm/bin')
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/openjdk/bin')
-# Other package managers
-let-env PATH = ($env.PATH | prepend "~/.local/bin")
-let-env PATH = ($env.PATH | prepend "~/.cargo/bin")
+
+# Custom settings
+let $config = ($config | upsert rm_always_trash true)
+let $config = ($config | upsert edit_mode vi)
+let $config = ($config | upsert max_history_size 100000)
+let $config = ($config | upsert footer_mode auto)
 
 ### Setup aliases
 alias edit = ^($env.EDITOR)
@@ -131,30 +89,5 @@ alias brew-cleanup = brew bundle cleanup --global --no-lock --force --zap
 alias brew-restore = brew bundle install --global --no-lock
 alias packer-sync = nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
 
-### Environment
-# Set default editor
-let-env EDITOR = "nvim"
-# Alias for Monash compute cluster
-let-env BIGBAD = "compute.optimisation-2020.cloud.edu.au"
-# CMake settings
-let-env CMAKE_EXPORT_COMPILE_COMMANDS = "1" # output compile-commands.json for clangd
-let-env CMAKE_GENERATOR = "Ninja Multi-Config" # use Ninja generator by default
-# Default find command for FZF
-let-env FZF_DEFAULT_COMMAND = "fd --type f"
-# Homebrew shell setup (brew shellenv)
-let-env HOMEBREW_PREFIX = "/opt/homebrew"
-let-env HOMEBREW_CELLAR = "/opt/homebrew/Cellar"
-let-env HOMEBREW_REPOSITORY = "/opt/homebrew"
-let-env HOMEBREW_SHELLENV_PREFIX = "/opt/homebrew"
-let-env INFOPATH = "/opt/homebrew/share/info"
-# Set MANPATH
-let-env MANPATH = "/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/opt/homebrew/share/man"
-
 # Load autojump plugin "zoxide"
 # source ~/.cache/zoxide/zoxide.nu
-
-# Load standardised prompt "starship"
-# TEMP: Custom vi prompt indicators
-let-env PROMPT_INDICATOR_VI_INSERT = "✏️ "
-let-env PROMPT_INDICATOR_VI_NORMAL = "🔙 "
-source ~/.cache/starship/init.nu
