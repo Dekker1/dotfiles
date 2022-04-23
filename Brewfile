@@ -19,7 +19,6 @@ brew "fd"
 brew "flex"
 brew "fzf"
 brew "gecode"
-brew "gh"
 brew "gnupg"
 brew "go"
 brew "hugo"
@@ -38,7 +37,6 @@ brew "pipenv"
 brew "pipx"
 brew "poetry"
 brew "prettier"
-brew "pyflow"
 brew "ripgrep"
 brew "rust-analyzer"
 brew "rustup-init"
@@ -56,26 +54,28 @@ cask "brave-browser"
 cask "calibre"
 cask "discord"
 cask "docker"
-cask "element"
 cask "font-go"
 cask "font-ibm-plex"
+cask "font-iosevka"
 cask "kitty"
 cask "mactex-no-gui"
-cask "mimestream"
+cask "microsoft-teams"
 cask "minizincide"
-cask "protonmail-bridge"
 cask "protonvpn"
+cask "signal"
 cask "skim"
 cask "sublime-merge"
 cask "visual-studio-code"
 cask "zoom"
-mas "1Password 7", id: 1333542190
-mas "Adblock Plus", id: 1432731683
+mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
+mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Slack", id: 803453959
+mas "Pixelmator Pro", id: 1289583905
+mas "Qantas", id: 1468230799
+mas "Structured", id: 1499198946
 mas "Textual IRC Client", id: 896450579
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
