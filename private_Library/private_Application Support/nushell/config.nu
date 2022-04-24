@@ -90,4 +90,4 @@ alias brew-restore = brew bundle install --global --no-lock
 alias packer-sync = nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
 
 # Load autojump plugin "zoxide"
-# source ~/.cache/zoxide/zoxide.nu
+source ~/.cache/zoxide/zoxide.nu
