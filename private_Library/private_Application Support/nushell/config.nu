@@ -83,8 +83,8 @@ let $config = ($config | upsert footer_mode auto)
 ### Setup aliases
 alias edit = ^($env.EDITOR)
 alias start = ^open
-alias set-light-theme = kitty +kitten themes Rosé Pine Dawn
-alias set-dark-theme = kitty +kitten themes Rosé Pine Moon
+alias set-light-theme = kitty +kitten themes Breakers
+alias set-dark-theme = kitty +kitten themes Mariana
 alias brew-backup = brew bundle dump --global --no-lock --cask --mas --tap --force
 alias brew-cleanup = brew bundle cleanup --global --no-lock --force --zap
 alias brew-restore = brew bundle install --global --no-lock
