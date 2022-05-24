@@ -43,13 +43,13 @@ let-env PATH = ($env.PATH | append "/opt/homebrew/bin")
 let-env PATH = ($env.PATH | append "/opt/homebrew/sbin")
 let-env PATH = ($env.PATH | append "/usr/local/bin")
 # Optional Homebrew packages
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/bison/bin')
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/flex/bin')
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/llvm/bin')
-let-env PATH = ($env.PATH | prepend $'(brew --prefix | str trim)/opt/openjdk/bin')
+let-env PATH = ($env.PATH | prepend $"(brew --prefix | str trim)/opt/bison/bin")
+let-env PATH = ($env.PATH | prepend $"(brew --prefix | str trim)/opt/flex/bin")
+let-env PATH = ($env.PATH | prepend $"(brew --prefix | str trim)/opt/llvm/bin")
+let-env PATH = ($env.PATH | prepend $"(brew --prefix | str trim)/opt/openjdk/bin")
 # Other package managers
-let-env PATH = ($env.PATH | prepend "~/.local/bin")
-let-env PATH = ($env.PATH | prepend "~/.cargo/bin")
+let-env PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
+let-env PATH = ($env.PATH | prepend $"($env.HOME)/.cargo/bin")
 
 # --- user custom ---
 # Set default editor
