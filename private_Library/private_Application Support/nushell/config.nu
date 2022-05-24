@@ -83,6 +83,7 @@ let $config = ($config | upsert footer_mode auto)
 ### Setup aliases
 alias edit = ^($env.EDITOR)
 alias start = ^open
+alias less = bat
 alias set-light-theme = kitty +kitten themes Breakers
 alias set-dark-theme = kitty +kitten themes Mariana
 alias brew-backup = brew bundle dump --global --no-lock --cask --mas --tap --force
