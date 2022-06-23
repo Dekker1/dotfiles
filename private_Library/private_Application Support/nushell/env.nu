@@ -2,8 +2,8 @@
 
 # Load standardised prompt "starship"
 # TEMP: Custom vi prompt indicators
-let-env PROMPT_INDICATOR_VI_INSERT = "✏️ "
-let-env PROMPT_INDICATOR_VI_NORMAL = "🔙 "
+let-env PROMPT_INDICATOR_VI_INSERT = ""
+let-env PROMPT_INDICATOR_VI_NORMAL = ""
 source ~/.cache/starship/init.nu
 
 # Specifies how environment variables are:
@@ -58,7 +58,7 @@ let-env EDITOR = "nvim"
 let-env BIGBAD = "compute.optimisation-2020.cloud.edu.au"
 # CMake settings
 let-env CMAKE_EXPORT_COMPILE_COMMANDS = "1" # output compile-commands.json for clangd
-let-env CMAKE_GENERATOR = "Ninja Multi-Config" # use Ninja generator by default
+let-env CMAKE_GENERATOR = "Sublime Text 2 - Ninja" # use Ninja generator by default
 # Default find command for FZF
 let-env FZF_DEFAULT_COMMAND = "fd --type f"
 # Homebrew shell setup (brew shellenv)

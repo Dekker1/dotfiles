@@ -75,10 +75,13 @@ use completions *
 
 
 # Custom settings
-let $config = ($config | upsert rm_always_trash true)
-let $config = ($config | upsert edit_mode vi)
-let $config = ($config | upsert max_history_size 100000)
-let $config = ($config | upsert footer_mode auto)
+let-env config = {
+  rm_always_trash: true,
+  edit_mode: vi,
+  max_history_size: 100000,
+  footer_mode: auto,
+  history_file_format: "sqlite",
+}
 
 ### Setup aliases
 alias edit = ^($env.EDITOR)

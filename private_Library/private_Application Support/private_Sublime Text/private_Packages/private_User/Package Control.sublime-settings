@@ -1,13 +1,13 @@
 {
 	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
+	"in_process_packages": [],
+	"installed_packages": [
 		"Debugger",
 		"LSP",
+		"LSP-ltex-ls",
+		"LSP-rust-analyzer",
 		"LSP-svelte",
+		"LSP-TexLab",
 		"MiniZinc Language",
 		"Package Control",
 		"Svelte",
