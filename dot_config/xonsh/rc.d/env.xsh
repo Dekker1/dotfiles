@@ -47,6 +47,7 @@ aliases["brew-cleanup"] = ("brew", "bundle", "cleanup", "--global", "--no-lock",
 aliases["brew-restore"] = ("brew", "bundle", "install", "--global", "--no-lock")
 aliases["edit"] = $VISUAL
 aliases["less"] = "bat"
+aliases["ls"] = "exa"
 aliases["set-dark-theme"] = ("kitty", "+kitten", "themes", "Mariana")
 aliases["set-light-theme"] = ("kitty", "+kitten", "themes", "Breakers")
 aliases["ssh"] = ("kitty", "+kitten", "ssh")
