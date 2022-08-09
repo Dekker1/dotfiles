@@ -2,8 +2,10 @@
 	"bootstrapped": true,
 	"in_process_packages": [],
 	"installed_packages": [
+		"CMakeFormat",
 		"Debugger",
 		"LSP",
+		"LSP-json",
 		"LSP-ltex-ls",
 		"LSP-rust-analyzer",
 		"LSP-svelte",
