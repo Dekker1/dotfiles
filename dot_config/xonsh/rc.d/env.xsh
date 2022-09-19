@@ -1,12 +1,17 @@
 import shutil
 import sys
 
-brew_prefix = $(brew --prefix).strip()
+# --- Xonsh Settings ---
+$XONSH_HISTORY_BACKEND = 'sqlite'
+$HISTCONTROL='ignoredups'
+$XONSH_SHOW_TRACEBACK = False
+$SUGGEST_COMMANDS = False
 
 # --- Path Variables ---
 #> Use MacOS path_helper executable
 source-bash $(/usr/libexec/path_helper -s)
 
+brew_prefix = $(brew --prefix).strip()
 $PATH = [
     brew_prefix + "/opt/bison/bin",
     brew_prefix + "/opt/flex/bin",
@@ -17,6 +22,8 @@ $PATH = [
 ]
 
 # --- General Environment ---
+#> Xonsh Behaviour
+$AUTO_CD = True
 #> Default Editor
 $EDITOR = "nvim"
 $VISUAL = "subl"
