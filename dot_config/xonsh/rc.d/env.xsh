@@ -26,12 +26,12 @@ $PATH = [
 $AUTO_CD = True
 #> Default Editor
 $EDITOR = "nvim"
-$VISUAL = "subl"
+$VISUAL = "code"
 #> Monash Cluster
 $OPTCLUSTER = "compute.optimisation-2020.cloud.edu.au"
 #> CMake settings
 $CMAKE_EXPORT_COMPILE_COMMANDS = "1" # output compile-commands.json for clangd
-$CMAKE_GENERATOR = "Sublime Text 2 - Ninja" # use Ninja generator by default
+$CMAKE_GENERATOR = "Ninja Multi-Config" # use Ninja generator by default
 #> FZF
 $FZF_DEFAULT_COMMAND = "fd --type f"
 
@@ -41,9 +41,9 @@ def _theme(args):
     """This command takes a 
     """
     DARK_XONSH_STYLE = "stata-dark"
-    DARK_KITTY_STYLE = "Mariana"
+    DARK_KITTY_STYLE = "GitHub Dark"
     LIGHT_XONSH_STYLE = "stata-light"
-    LIGHT_KITTY_STYLE = "Breakers"
+    LIGHT_KITTY_STYLE = "GitHub Light"
     if len(args) == 0 or args[0] == "info":
         print("dark" if $XONSH_COLOR_STYLE == DARK_XONSH_STYLE else "light")
     elif args[0] == "set":

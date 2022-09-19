@@ -1,2 +1,2 @@
-# Use simple ansi theme for bat
---theme="ansi"
+# Use github theme for bat
+--theme="GitHub"
