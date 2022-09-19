@@ -1,3 +1,4 @@
+import shutil
 import sys
 
 brew_prefix = $(brew --prefix).strip()
@@ -70,11 +71,14 @@ aliases["brew-backup"] = ("brew", "bundle", "dump", "--global", "--no-lock", "--
 aliases["brew-cleanup"] = ("brew", "bundle", "cleanup", "--global", "--no-lock", "--force", "--zap")
 aliases["brew-restore"] = ("brew", "bundle", "install", "--global", "--no-lock")
 aliases["edit"] = $VISUAL
-aliases["less"] = "bat"
-aliases["ls"] = "exa"
 aliases["ssh"] = ("kitty", "+kitten", "ssh")
-aliases["start"] = "open"
 aliases["theme"] = _theme
+if shutil.which('bat'):
+    aliases["less"] = "bat"
+if shutil.which('exa'):
+    aliases["ls"] = "exa"
+if shutil.which('rsync'):
+    aliases['cp'] = 'rsync --progress --recursive --archive'
 
 # --- Set theme based on Dark Mode ---
 _theme(["set"])
