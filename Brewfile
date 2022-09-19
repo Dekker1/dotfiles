@@ -8,7 +8,7 @@ tap "koekeishiya/formulae"
 brew "bat"
 brew "bison"
 brew "black"
-brew "cbc"
+brew "python@3.9"
 brew "ccache"
 brew "chezmoi"
 brew "cmake"
@@ -21,13 +21,13 @@ brew "gnupg"
 brew "go"
 brew "hugo"
 brew "llvm"
+brew "ltex-ls"
 brew "mas"
 brew "maturin"
 brew "mdbook"
 brew "neovim"
 brew "ninja"
 brew "node"
-brew "nushell"
 brew "or-tools"
 brew "pandoc"
 brew "pinentry-mac"
@@ -41,6 +41,7 @@ brew "rustup-init"
 brew "starship"
 brew "tectonic"
 brew "texlab"
+brew "topgrade"
 brew "xonsh"
 brew "zoxide"
 brew "zplug"
@@ -64,6 +65,7 @@ cask "font-playfair-display"
 cask "kitty"
 cask "mactex-no-gui"
 cask "minizincide"
+cask "multipass"
 cask "protonvpn"
 cask "signal"
 cask "skim"
@@ -75,13 +77,14 @@ cask "zulip"
 mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
-mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator Pro", id: 1289583905
 mas "Qantas", id: 1468230799
+mas "Slack", id: 803453959
 mas "Textual IRC Client", id: 896450579
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
+mas "Tweetbot", id: 1384080005
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
