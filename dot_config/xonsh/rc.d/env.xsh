@@ -41,9 +41,9 @@ def _theme(args):
     """This command takes a 
     """
     DARK_XONSH_STYLE = "stata-dark"
-    DARK_KITTY_STYLE = "GitHub Dark"
+    DARK_KITTY_STYLE = "Ayu Mirage"
     LIGHT_XONSH_STYLE = "stata-light"
-    LIGHT_KITTY_STYLE = "GitHub Light"
+    LIGHT_KITTY_STYLE = "Ayu Light"
     if len(args) == 0 or args[0] == "info":
         print("dark" if $XONSH_COLOR_STYLE == DARK_XONSH_STYLE else "light")
     elif args[0] == "set":
@@ -68,7 +68,7 @@ def _theme(args):
             except ImportError:
                 print("darkdetect package not found (xpip install darkdetect)", file=sys.stderr)
         $XONSH_COLOR_STYLE = DARK_XONSH_STYLE if dark_mode else LIGHT_XONSH_STYLE
-        $( kitty +kitten themes @(DARK_KITTY_STYLE if dark_mode else LIGHT_KITTY_STYLE) )
+        $( kitty +kitten themes --cache-age=-1 @(DARK_KITTY_STYLE if dark_mode else LIGHT_KITTY_STYLE) )
     else:
         print(f"unknown argument `{args[0]}'", file=sys.stderr)
         return 1
