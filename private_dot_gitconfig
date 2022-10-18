@@ -18,8 +18,12 @@
 [user]
 	name = Jip J. Dekker
 	email = jip@dekker.one
-	signingkey = 517DF4A00618C9C3
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMCC0liW47USr/Ic1rJ52V4eE07y42VG9Ols1zYBrPlc
 [pull]
 	ff = only
 [init]
 	defaultBranch = develop
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
