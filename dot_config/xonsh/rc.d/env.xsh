@@ -41,9 +41,9 @@ def _theme(args):
     """This command takes a 
     """
     DARK_XONSH_STYLE = "stata-dark"
-    DARK_KITTY_STYLE = "Ayu Mirage"
+    DARK_KITTY_STYLE = "Rosé Pine Moon"
     LIGHT_XONSH_STYLE = "stata-light"
-    LIGHT_KITTY_STYLE = "Ayu Light"
+    LIGHT_KITTY_STYLE = "Rosé Pine Dawn"
     if len(args) == 0 or args[0] == "info":
         print("dark" if $XONSH_COLOR_STYLE == DARK_XONSH_STYLE else "light")
     elif args[0] == "set":
