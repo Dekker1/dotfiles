@@ -2,7 +2,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["tlmgr", "vim", "gem", "node"]
+disable = ["tlmgr", "vim", "gem", "node", "ruby_gems"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -11,7 +11,7 @@ disable = ["tlmgr", "vim", "gem", "node"]
 #only = ["system", "emacs"]
 
 # Do not ask to retry failed steps (default: false)
-#no_retry = true
+no_retry = true
 
 # Run inside tmux
 #run_in_tmux = true
