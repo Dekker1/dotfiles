@@ -23,7 +23,6 @@ brew "hugo"
 brew "llvm"
 brew "ltex-ls"
 brew "mas"
-brew "maturin"
 brew "mdbook"
 brew "neovim"
 brew "ninja"
@@ -31,12 +30,10 @@ brew "node"
 brew "or-tools"
 brew "pandoc"
 brew "pinentry-mac"
-brew "pipenv"
 brew "pipx"
 brew "poetry"
 brew "prettier"
 brew "ripgrep"
-brew "rust-analyzer"
 brew "rustup-init"
 brew "starship"
 brew "tectonic"
@@ -47,12 +44,12 @@ brew "zoxide"
 brew "zplug"
 brew "dekker1/minizinc/choco"
 brew "dekker1/minizinc/flatzingo"
+brew "dekker1/minizinc/fzn-oscar-cbls"
 brew "dekker1/minizinc/fzn-picat"
 brew "dekker1/minizinc/geas"
 brew "dekker1/minizinc/jacop"
 brew "dekker1/minizinc/yuck"
 brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
 cask "alfred"
 cask "calibre"
 cask "discord"
@@ -65,26 +62,30 @@ cask "font-playfair-display"
 cask "kitty"
 cask "mactex-no-gui"
 cask "minizincide"
+cask "mirrorop"
 cask "multipass"
 cask "protonvpn"
 cask "signal"
 cask "skim"
 cask "sublime-merge"
 cask "sublime-text"
+cask "visual-studio-code"
 cask "zoom"
 cask "zotero"
 cask "zulip"
 mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator Pro", id: 1289583905
 mas "Qantas", id: 1468230799
 mas "Slack", id: 803453959
+mas "Tailscale", id: 1475387142
 mas "Textual IRC Client", id: 896450579
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Tweetbot", id: 1384080005
 mas "WhatsApp", id: 1147396723
-mas "Xcode", id: 497799835
