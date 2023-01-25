@@ -55,6 +55,7 @@ cask "calibre"
 cask "discord"
 cask "docker"
 cask "firefox"
+cask "font-atkinson-hyperlegible"
 cask "font-ibm-plex"
 cask "font-iosevka"
 cask "font-iosevka-slab"
@@ -74,7 +75,6 @@ cask "zoom"
 cask "zotero"
 cask "zulip"
 mas "1Password for Safari", id: 1569813296
-mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Word", id: 462054704
@@ -83,9 +83,7 @@ mas "Pages", id: 409201541
 mas "Pixelmator Pro", id: 1289583905
 mas "Qantas", id: 1468230799
 mas "Slack", id: 803453959
-mas "Tailscale", id: 1475387142
-mas "Textual IRC Client", id: 896450579
+mas "Textual IRC Client", id: 1262957439
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
-mas "Tweetbot", id: 1384080005
 mas "WhatsApp", id: 1147396723
